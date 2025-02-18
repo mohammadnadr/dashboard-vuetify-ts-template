@@ -34,10 +34,11 @@ const sidebarMenu = shallowRef(sidebarItems);
     <!-- ---------------------------------------------- -->
     <!---Navigation -->
     <!-- ---------------------------------------------- -->
-    <perfect-scrollbar class="scrollnavbar">
-      <v-list aria-busy="true" aria-label="menu list">
+    <perfect-scrollbar class="scrollnavbar borderLight" >
+      <v-list aria-busy="true" aria-label="menu list" bg-color="borderLight">
         <!---Menu Loop -->
         <template v-for="(item, i) in sidebarMenu" :key="i">
+
           <!---Item Sub Header -->
           <NavGroup :item="item" v-if="item.header" :key="item.title" />
           <!---Item Divider -->

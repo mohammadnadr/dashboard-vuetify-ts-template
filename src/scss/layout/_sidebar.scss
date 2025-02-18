@@ -44,6 +44,7 @@
   }
 }
 .scrollnavbar {
+  background-color: rgba(var(--v-theme-borderLight), 1);
   height: calc(100vh - 151px);
   .smallCap {
     padding: 0px 0 0 20px !important;
@@ -142,6 +143,7 @@
     opacity: 0;
   }
   .scrollnavbar {
+
     .v-list-item {
       .v-list-item__prepend {
         margin-left: 8px;
