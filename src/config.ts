@@ -7,6 +7,7 @@ export type ConfigProps = {
   fontTheme: string;
   inputBg: boolean;
   boxed: boolean;
+  locale: string;
   isRtl: boolean;
 };
 
@@ -19,7 +20,8 @@ const config: ConfigProps = {
   fontTheme: 'Public sans',
   inputBg: false,
   boxed: false,
-  isRtl: false
+  locale: localStorage.getItem('locale') || 'fa',
+  isRtl: !!(localStorage.getItem('locale') && localStorage.getItem('locale') !== 'en')
 };
 
 export default config;

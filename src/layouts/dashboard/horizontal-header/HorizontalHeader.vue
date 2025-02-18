@@ -130,6 +130,7 @@ watch(priority, (newPriority) => {
     <!-- Customizer -->
     <!-- ---------------------------------------------- -->
     <v-btn
+      disabled
       class="customizer-btn ml-sm-2 ms-1"
       icon
       color="darkText"

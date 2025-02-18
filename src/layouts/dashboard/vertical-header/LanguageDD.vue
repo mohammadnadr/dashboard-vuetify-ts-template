@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { shallowRef } from 'vue';
 import { useCustomizerStore } from '@/stores/customizer';
+
 const customizer = useCustomizerStore();
 const languageDD = shallowRef([
   { title: 'English', subtext: 'UK', value: 'en' },
@@ -9,8 +10,7 @@ const languageDD = shallowRef([
 ]);
 
 function changeLocale(item) {
-  if (item.value === 'en') customizer.SET_DIRECTION('ltr')
-  else customizer.SET_DIRECTION('rtl')
+  customizer.SET_LOCALE(item.value);
 }
 </script>
 
@@ -28,7 +28,7 @@ function changeLocale(item) {
       @click="
         () => {
           $i18n.locale = item.value;
-          changeLocale(item)
+          changeLocale(item);
         }
       "
     >

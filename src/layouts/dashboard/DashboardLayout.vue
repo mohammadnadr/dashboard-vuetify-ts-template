@@ -11,19 +11,26 @@ import Customizer from './customizer/CustomizerPanel.vue';
 import FooterPanel from './footer/FooterPanel.vue';
 import { useCustomizerStore } from '../../stores/customizer';
 import { DirAttrSet, HexToRgb } from '@/utils/utils';
+
 const customizer = useCustomizerStore();
 const theme = useTheme();
 
 // Set the initial direction attribute when the component is mounted
 onMounted(() => {
-  DirAttrSet(customizer.isRtl ? 'rtl' : 'ltr');
+  if (customizer.locale && customizer.locale === 'en') DirAttrSet('ltr');
+  else DirAttrSet('rtl');
 });
+
+if (customizer.locale && customizer.locale === 'en') DirAttrSet('ltr');
+else DirAttrSet('rtl');
+if (!localStorage.getItem('locale')) customizer.SET_LOCALE('fa');
 
 // Watch for changes in the isRtl property and update the direction attribute accordingly
 watch(
   () => customizer.isRtl,
-  (newValue) => {
-    DirAttrSet(newValue ? 'rtl' : 'ltr');
+  () => {
+    if (customizer.locale && customizer.locale === 'en') DirAttrSet('ltr');
+    else DirAttrSet('rtl');
   }
 );
 
