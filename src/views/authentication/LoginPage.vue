@@ -1,7 +1,7 @@
 <script setup>
 import Logo from '@/layouts/dashboard/logo/LogoMain.vue';
 import AuthLogin from './authForms/AuthLogin.vue';
-import AuthFooter from '@/views/authentication/auth/AuthFooter.vue';
+// import AuthFooter from '@/views/authentication/auth/AuthFooter.vue';
 
 import { createApp } from 'vue';
 import { VueReCaptcha, useReCaptcha } from 'vue-recaptcha-v3';
@@ -62,7 +62,7 @@ createApp(component).use(VueReCaptcha, { siteKey: '6LeCprcaAAAAAOD0aEK7WpfHc__Cy
         <div class="d-flex align-center justify-center" style="min-height: calc(100vh - 148px)">
           <v-row justify="center">
             <v-col cols="12" md="12">
-              <v-card elevation="0" class="loginBox">
+              <v-card elevation="8" class="loginBox" >
                 <v-card elevation="24">
                   <v-card-text class="pa-sm-10 pa-6">
                     <!---Login Form-->
@@ -76,12 +76,7 @@ createApp(component).use(VueReCaptcha, { siteKey: '6LeCprcaAAAAAOD0aEK7WpfHc__Cy
         </div>
       </v-container>
     </v-col>
-    <!---Login Part-->
-    <v-col cols="12">
-      <v-container class="pt-0 pb-6">
-        <AuthFooter />
-      </v-container>
-    </v-col>
+
   </v-row>
 </template>
 <style lang="scss">

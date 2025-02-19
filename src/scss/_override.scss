@@ -118,7 +118,5 @@ header {
   @media (max-width: 600px) {
     filter: blur(30px);
   }
-  [dir='rtl'] & {
     left: 0;
-  }
 }

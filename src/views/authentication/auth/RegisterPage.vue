@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Logo from '@/layouts/dashboard/logo/LogoMain.vue';
 import AuthRegister from '../authForms/AuthRegister.vue';
-import AuthFooter from './AuthFooter.vue';
 </script>
 
 <template>
@@ -35,7 +34,7 @@ import AuthFooter from './AuthFooter.vue';
         <div class="d-flex align-center justify-center" style="min-height: calc(100vh - 148px)">
           <v-row justify="center">
             <v-col cols="12" md="12">
-              <v-card elevation="0" class="loginBox">
+              <v-card elevation="8" class="loginBox">
                 <v-card elevation="24">
                   <v-card-text class="pa-sm-10 pa-6">
                     <!---Register Form-->
@@ -49,12 +48,7 @@ import AuthFooter from './AuthFooter.vue';
         </div>
       </v-container>
     </v-col>
-    <!---Register Part-->
-    <v-col cols="12">
-      <v-container class="pt-0 pb-6">
-        <AuthFooter />
-      </v-container>
-    </v-col>
+
   </v-row>
 </template>
 <style lang="scss">

@@ -24,6 +24,7 @@
     "@tsconfig/node20": "^20.1.4",
     "@typescript-eslint/parser": "8.14.0",
     "ant-design-vue": "4.2.6",
+    "axios": "^1.7.9",
     "pinia": "2.2.6",
     "typescript-eslint": "8.14.0",
     "vee-validate": "4.14.7",
@@ -38,6 +39,7 @@
     "webpack-plugin-vuetify": "3.0.3"
   },
   "devDependencies": {
+    "@mdi/font": "^7.4.47",
     "@types/node": "22.9.0",
     "@vitejs/plugin-vue": "5.2.0",
     "@vue/tsconfig": "0.6.0",

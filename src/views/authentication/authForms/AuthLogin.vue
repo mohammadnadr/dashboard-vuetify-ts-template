@@ -5,25 +5,29 @@ import { EyeInvisibleOutlined, EyeOutlined } from '@ant-design/icons-vue';
 import { useAuthStore } from '@/stores/auth';
 import { Form } from 'vee-validate';
 
+
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n(); // دسترسی به تابع t برای ترجمه
 const checkbox = ref(false);
 const valid = ref(false);
-const show1 = ref(false);
+const show = ref(false);
 const password = ref('admin123');
 const username = ref('info@codedthemes.com');
 // Password validation rules
 const passwordRules = ref([
-  (v: string) => !!v || 'Password is required',
-  (v: string) => v === v.trim() || 'Password cannot start or end with spaces',
-  (v: string) => v.length <= 10 || 'Password must be less than 10 characters'
+  (v: string) => !!v || t('passwordRequired'),
+  (v: string) => v === v.trim() || t('passwordSpaces'),
+  (v: string) => v.length <= 10 || t('passwordLength')
 ]);
 // Email validation rules
 const emailRules = ref([
-  (v: string) => !!v.trim() || 'E-mail is required',
+  (v: string) => !!v.trim() || t('emailRequired'),
   (v: string) => {
     const trimmedEmail = v.trim();
-    return !/\s/.test(trimmedEmail) || 'E-mail must not contain spaces';
+    return !/\s/.test(trimmedEmail) || t('emailSpaces');
   },
-  (v: string) => /.+@.+\..+/.test(v.trim()) || 'E-mail must be valid'
+  (v: string) => /.+@.+\..+/.test(v.trim()) || t('emailValid')
 ]);
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -41,12 +45,19 @@ function validate(values: any, { setErrors }: any) {
 
 <template>
   <div class="d-flex justify-space-between align-center">
-    <h3 class="text-h3 text-center mb-0">Login</h3>
-    <router-link to="/register1" class="text-primary text-decoration-none">Don't Have an account?</router-link>
+    <h3 class="text-h3 text-center mb-0">
+      {{ $t('login') }}
+    </h3>
+    <router-link
+      :to="{name:'Register'}"
+      class="text-primary text-decoration-none"
+    >
+      {{ $t('dontHaveAccount') }}
+    </router-link>
   </div>
   <Form @submit="validate" class="mt-7 loginForm" v-slot="{ errors, isSubmitting }">
     <div class="mb-6">
-      <v-label>Email Address</v-label>
+      <v-label>{{ $t('emailAddress') }}</v-label>
       <v-text-field
         aria-label="email address"
         v-model="username"
@@ -60,7 +71,7 @@ function validate(values: any, { setErrors }: any) {
       ></v-text-field>
     </div>
     <div>
-      <v-label>Password</v-label>
+      <v-label>{{ $t('password') }}</v-label>
       <v-text-field
         aria-label="password"
         v-model="password"
@@ -69,14 +80,14 @@ function validate(values: any, { setErrors }: any) {
         variant="outlined"
         color="primary"
         hide-details="auto"
-        :type="show1 ? 'text' : 'password'"
+        :type="show ? 'text' : 'password'"
         class="mt-2"
         @input="password"
       >
         <template v-slot:append-inner>
           <v-btn color="secondary" icon rounded variant="text">
-            <EyeInvisibleOutlined :style="{ color: 'rgb(var(--v-theme-secondary))' }" v-if="show1 == false" @click="show1 = !show1" />
-            <EyeOutlined :style="{ color: 'rgb(var(--v-theme-secondary))' }" v-if="show1 == true" @click="show1 = !show1" />
+            <EyeInvisibleOutlined :style="{ color: 'rgb(var(--v-theme-secondary))' }" v-if="show == false" @click="show = !show" />
+            <EyeOutlined :style="{ color: 'rgb(var(--v-theme-secondary))' }" v-if="show == true" @click="show = !show" />
           </v-btn>
         </template>
       </v-text-field>
@@ -86,19 +97,19 @@ function validate(values: any, { setErrors }: any) {
       <v-checkbox
         v-model="checkbox"
         :rules="[(v: any) => !!v || 'You must agree to continue!']"
-        label="Keep me sign in"
+        :label="$t('keepMeSignedIn')"
         required
         color="primary"
         class="ms-n2"
         hide-details
       ></v-checkbox>
       <div class="ms-auto">
-        <router-link to="/forgot-pwd1" class="text-darkText link-hover">Forgot Password?</router-link>
+        <router-link to="/forgot-pwd1" class="text-darkText link-hover"> {{ $t('forgotPassword') }}</router-link>
       </div>
     </div>
     <v-btn color="primary" :loading="isSubmitting" block class="mt-5" variant="flat" size="large" :disabled="valid" type="submit">
-      Login</v-btn
-    >
+      {{ $t('login') }}
+    </v-btn>
     <div v-if="errors.apiError" class="mt-2">
       <v-alert color="error">{{ errors.apiError }}</v-alert>
     </div>
@@ -109,6 +120,7 @@ function validate(values: any, { setErrors }: any) {
   .v-text-field .v-field--active input {
     font-weight: 500;
   }
+
   .v-field--appended {
     padding-inline-end: 0;
   }

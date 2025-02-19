@@ -49,12 +49,7 @@ import AuthFooter from './AuthFooter.vue';
         </div>
       </v-container>
     </v-col>
-    <!---Check mail Part-->
-    <v-col cols="12">
-      <v-container class="pt-0 pb-6">
-        <AuthFooter />
-      </v-container>
-    </v-col>
+
   </v-row>
 </template>
 <style lang="scss">

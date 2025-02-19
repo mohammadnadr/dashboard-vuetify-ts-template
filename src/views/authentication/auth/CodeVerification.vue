@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Logo from '@/layouts/dashboard/logo/LogoMain.vue';
 import AuthCodeVerification from '../authForms/AuthCodeVerification.vue';
-import AuthFooter from './AuthFooter.vue';
+// import AuthFooter from './AuthFooter.vue';
 </script>
 
 <template>
@@ -52,12 +52,7 @@ import AuthFooter from './AuthFooter.vue';
         </div>
       </v-container>
     </v-col>
-    <!---Code verification Part-->
-    <v-col cols="12">
-      <v-container class="pt-0 pb-6">
-        <AuthFooter />
-      </v-container>
-    </v-col>
+
   </v-row>
 </template>
 <style lang="scss">

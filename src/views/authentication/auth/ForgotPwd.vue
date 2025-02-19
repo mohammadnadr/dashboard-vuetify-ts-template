@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Logo from '@/layouts/dashboard/logo/LogoMain.vue';
 import AuthForgotPwd from '../authForms/AuthForgotPwd.vue';
-import AuthFooter from './AuthFooter.vue';
+// import AuthFooter from './AuthFooter.vue';
 </script>
 
 <template>
@@ -30,22 +30,27 @@ import AuthFooter from './AuthFooter.vue';
       </div>
     </v-col>
     <!---Forgot pwd Part-->
-    <v-col cols="12" class="d-flex align-center">
+    <v-col
+      cols="12"
+      class="d-flex align-center"
+    >
       <v-container>
-        <div class="d-flex align-center justify-center" style="min-height: calc(100vh - 148px)">
+        <div
+          class="d-flex align-center justify-center"
+          style="min-height: calc(100vh - 148px)"
+        >
           <v-row justify="center">
-            <v-col cols="12" lg="12">
-              <v-card elevation="0" class="loginBox">
+            <v-col
+              cols="12"
+              lg="12"
+            >
+              <v-card
+                elevation="12"
+                class="loginBox"
+              >
                 <v-card elevation="24">
                   <v-card-text class="pa-sm-10 pa-4">
-                    <div class="d-flex justify-space-between align-center">
-                      <h3 class="text-h3 text-center mb-0">Forgot Password</h3>
-                      <router-link to="/login1" class="text-primary text-decoration-none">Back to Login</router-link>
-                    </div>
-
-                    <!---Forgot pwd Form-->
                     <AuthForgotPwd />
-                    <!---Forgot pwd Form-->
                   </v-card-text>
                 </v-card>
               </v-card>
@@ -54,12 +59,7 @@ import AuthFooter from './AuthFooter.vue';
         </div>
       </v-container>
     </v-col>
-    <!---Forgot pwd Part-->
-    <v-col cols="12">
-      <v-container class="pt-0 pb-6">
-        <AuthFooter />
-      </v-container>
-    </v-col>
+
   </v-row>
 </template>
 <style lang="scss">

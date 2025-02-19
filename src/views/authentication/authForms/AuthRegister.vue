@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-// icons
+import { useI18n } from 'vue-i18n';
 import { EyeInvisibleOutlined, EyeOutlined } from '@ant-design/icons-vue';
-const show1 = ref(false);
+
+const { t } = useI18n(); // دسترسی به تابع t برای ترجمه
+
+const show = ref(false);
 const password = ref('');
 const email = ref('');
 const Regform = ref();
@@ -10,20 +13,21 @@ const firstname = ref('');
 const lastname = ref('');
 // Password validation rules
 const passwordRules = ref([
-  (v: string) => !!v || 'Password is required',
-  (v: string) => v === v.trim() || 'Password cannot start or end with spaces',
-  (v: string) => v.length <= 10 || 'Password must be less than 10 characters'
+  (v: string) => !!v || t('passwordRequired'),
+  (v: string) => v === v.trim() || t('passwordTrimSpaces'),
+  (v: string) => v.length <= 10 || t('passwordLength')
 ]);
-const firstRules = ref([(v: string) => !!v || 'First Name is required']);
-const lastRules = ref([(v: string) => !!v || 'Last Name is required']);
+const firstRules = ref([(v: string) => !!v || t('firstNameRequired')]);
+const lastRules = ref([(v: string) => !!v || t('lastNameRequired')]);
+
 // Email validation rules
 const emailRules = ref([
-  (v: string) => !!v.trim() || 'E-mail is required',
+  (v: string) => !!v.trim() || t('emailRequired'),
   (v: string) => {
     const trimmedEmail = v.trim();
-    return !/\s/.test(trimmedEmail) || 'E-mail must not contain spaces';
+    return !/\s/.test(trimmedEmail) || t('emailNoSpaces');
   },
-  (v: string) => /.+@.+\..+/.test(v.trim()) || 'E-mail must be valid'
+  (v: string) => /.+@.+\..+/.test(v.trim()) || t('emailValid')
 ]);
 
 function validate() {
@@ -33,14 +37,29 @@ function validate() {
 
 <template>
   <div class="d-flex justify-space-between align-center">
-    <h3 class="text-h3 text-center mb-0">Sign up</h3>
-    <router-link to="/login1" class="text-primary text-decoration-none">Already have an account?</router-link>
+    <h3 class="text-h3 text-center mb-0">
+      {{ t('signUp') }}
+    </h3>
+    <router-link
+      :to="{ name: 'Login' }"
+      class="text-primary text-decoration-none"
+    >
+      {{ t('alreadyHaveAccount') }}
+    </router-link>
   </div>
-  <v-form ref="Regform" lazy-validation action="/dashboards/analytical" class="mt-7 loginForm">
+  <v-form
+    ref="Regform"
+    lazy-validation
+    class="mt-7 loginForm"
+  >
     <v-row class="my-0">
-      <v-col cols="12" sm="6" class="py-0">
+      <v-col
+        cols="12"
+        sm="6"
+        class="py-0"
+      >
         <div class="mb-6">
-          <v-label>First Name*</v-label>
+          <v-label>{{ t('firstName') }}</v-label>
           <v-text-field
             v-model="firstname"
             :rules="firstRules"
@@ -49,13 +68,17 @@ function validate() {
             variant="outlined"
             class="mt-2"
             color="primary"
-            placeholder="John"
-          ></v-text-field>
+            :placeholder="t('firstName')"
+          />
         </div>
       </v-col>
-      <v-col cols="12" sm="6" class="py-0">
+      <v-col
+        cols="12"
+        sm="6"
+        class="py-0"
+      >
         <div class="mb-6">
-          <v-label>Last Name*</v-label>
+          <v-label>{{ t('lastName') }}</v-label>
           <v-text-field
             v-model="lastname"
             :rules="lastRules"
@@ -64,31 +87,36 @@ function validate() {
             variant="outlined"
             class="mt-2"
             color="primary"
-            placeholder="Doe"
-          ></v-text-field>
+            :placeholder="t('lastName')"
+          />
         </div>
       </v-col>
     </v-row>
     <div class="mb-6">
-      <v-label>Company</v-label>
-      <v-text-field hide-details="auto" variant="outlined" class="mt-2" color="primary" placeholder="Demo Inc."></v-text-field>
+      <v-label>{{ t('company') }}</v-label>
+      <v-text-field
+        hide-details="auto"
+        variant="outlined"
+        class="mt-2"
+        color="primary"
+        :placeholder="t('company')"
+      />
     </div>
     <div class="mb-6">
-      <v-label>Email Address*</v-label>
+      <v-label>{{ t('emailAddress') }}</v-label>
       <v-text-field
         v-model="email"
         :rules="emailRules"
-        placeholder="demo@company.com"
+        :placeholder="t('emailAddress')"
         class="mt-2"
         required
         hide-details="auto"
         variant="outlined"
         color="primary"
-        @input="email"
-      ></v-text-field>
+      />
     </div>
     <div class="mb-6">
-      <v-label>Password</v-label>
+      <v-label>{{ t('password') }}</v-label>
       <v-text-field
         v-model="password"
         :rules="passwordRules"
@@ -97,30 +125,37 @@ function validate() {
         variant="outlined"
         color="primary"
         hide-details="auto"
-        :type="show1 ? 'text' : 'password'"
+        :type="show ? 'text' : 'password'"
         class="mt-2"
-        @input="password"
       >
-        <template v-slot:append-inner>
-          <v-btn color="secondary" icon rounded variant="text">
-            <EyeInvisibleOutlined :style="{ color: 'rgb(var(--v-theme-secondary))' }" v-if="show1 == false" @click="show1 = !show1" />
-            <EyeOutlined :style="{ color: 'rgb(var(--v-theme-secondary))' }" v-if="show1 == true" @click="show1 = !show1" />
+        <template #append-inner>
+          <v-btn
+            color="secondary"
+            icon
+            rounded
+            variant="text"
+            @click="show = !show"
+          >
+            <EyeInvisibleOutlined :style="{ color: 'rgb(var(--v-theme-secondary))' }" v-if="show == false" @click="show = !show" />
+            <EyeOutlined :style="{ color: 'rgb(var(--v-theme-secondary))' }" v-if="show == true" @click="show = !show" />
           </v-btn>
         </template>
       </v-text-field>
     </div>
 
-    <div class="d-sm-inline-flex align-center mt-2 mb-7 mb-sm-0 font-weight-bold">
-      <h6 class="text-caption">
-        By Signing up, you agree to our
-        <router-link to="/register1" class="text-primary link-hover font-weight-medium">Terms of Service </router-link>
-        and
-        <router-link to="/pages/privacy-policy" class="text-primary link-hover font-weight-medium">Privacy Policy</router-link>
-      </h6>
-    </div>
-    <v-btn color="primary" block class="mt-4" variant="flat" size="large" @click="validate()">Create Account</v-btn>
+    <v-btn
+      color="primary"
+      block
+      class="mt-4"
+      variant="flat"
+      size="large"
+      @click="validate()"
+    >
+      {{ t('createAccount') }}
+    </v-btn>
   </v-form>
 </template>
+
 <style lang="scss">
 .loginForm {
   .v-field--appended {
