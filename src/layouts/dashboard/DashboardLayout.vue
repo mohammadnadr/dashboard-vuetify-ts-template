@@ -8,8 +8,7 @@ import VerticalHeaderVue from './vertical-header/VerticalHeader.vue';
 import HorizontalHeader from './horizontal-header/HorizontalHeader.vue';
 import HorizontalSidebar from './horizontal-sidebar/HorizontalSidebar.vue';
 import Customizer from './customizer/CustomizerPanel.vue';
-import FooterPanel from './footer/FooterPanel.vue';
-import { useCustomizerStore } from '../../stores/customizer';
+import { useCustomizerStore } from '@/stores/customizer.ts';
 import { DirAttrSet, HexToRgb } from '@/utils/utils';
 
 const customizer = useCustomizerStore();
