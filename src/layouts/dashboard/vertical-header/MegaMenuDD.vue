@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { shallowRef } from 'vue';
 // icons
-import { ArrowRightOutlined } from '@ant-design/icons-vue';
+import { ArrowBarRightIcon } from 'vue-tabler-icons';
+
 
 // assets
 import imageChart from '@/assets/images/mega-menu/chart.svg';
@@ -55,6 +56,7 @@ const dropdownMenu = shallowRef([
     link: 'Coming soon'
   }
 ]);
+
 </script>
 
 <template>
@@ -68,7 +70,7 @@ const dropdownMenu = shallowRef([
           <h2 class="text-h2 text-white mb-1">LOREM LOREM</h2>
           <p class="text-h6 text-white mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
           <div class="d-flex justify-between align-end">
-            <v-btn prepend-icon="$arrowRight" variant="flat" class="scale-hover"> button </v-btn>
+            <v-btn :prepend-icon="ArrowBarRightIcon" variant="flat" class="scale-hover"> button </v-btn>
             <v-img :src="imageChart" alt="chart" width="124" height="126" />
           </div>
         </div>
