@@ -12,66 +12,49 @@ const dropdownMenu = shallowRef([
   { header: 'Other pages' },
   { header: 'SASS Pages' },
   {
-    link: 'Login',
-    href: 'https://mantisdashboard.io/vue/login1'
+    link: 'Login'
   },
   {
-    link: 'FAQs',
-    href: 'https://mantisdashboard.io/vue/faq'
+    link: 'FAQs'
   },
   {
-    link: '404 Error',
-    href: 'https://mantisdashboard.io/vue/error'
+    link: '404 Error'
   },
   {
-    link: 'Register',
-    href: 'https://mantisdashboard.io/vue/register1'
+    link: 'Register'
   },
   {
-    link: 'Contact us',
-    href: 'https://mantisdashboard.io/vue/contact-us'
+    link: 'Contact us'
   },
   {
-    link: 'Landing',
-    href: 'https://mantisdashboard.io/vue'
+    link: 'Landing'
   },
   {
-    link: 'Reset Password',
-    href: 'https://mantisdashboard.io/vue/reset-pwd1'
+    link: 'Reset Password'
   },
   {
-    link: 'Pricing',
-    href: 'https://mantisdashboard.io/vue/pricing1'
+    link: 'Pricing'
   },
   {},
   {
-    link: 'Forgot Password',
-    href: 'https://mantisdashboard.io/vue/forgot-pwd1'
+    link: 'Forgot Password'
   },
   {
-    link: 'Privacy policy',
-    href: 'https://mantisdashboard.io/vue/privacy-policy'
+    link: 'Privacy policy'
   },
   {},
   {
-    link: 'Verification code',
-    href: 'https://mantisdashboard.io/vue/code-verify1'
+    link: 'Verification code'
   },
   {
-    link: 'Construction',
-    href: 'https://mantisdashboard.io/vue/construction'
+    link: 'Construction'
   },
   {},
   {},
   {
-    link: 'Coming soon',
-    href: 'https://mantisdashboard.io/vue/comingsoon1'
+    link: 'Coming soon'
   }
 ]);
-function openNewTab() {
-  const url = 'https://mantisdashboard.io/vue/components/buttons'; // Replace with your URL
-  window.open(url, '_blank');
-}
 </script>
 
 <template>
@@ -82,13 +65,10 @@ function openNewTab() {
     <v-row class="ma-0">
       <v-col cols="12" lg="4" class="pa-0">
         <div class="megamenu-banner pa-9">
-          <h2 class="text-h2 text-white mb-1">Explore Components</h2>
-          <p class="text-h6 text-white mb-0">Try our pre made component pages to check how it feels and suits as per your need.</p>
+          <h2 class="text-h2 text-white mb-1">LOREM LOREM</h2>
+          <p class="text-h6 text-white mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
           <div class="d-flex justify-between align-end">
-            <v-btn @click="openNewTab" variant="flat" class="scale-hover">
-              View All
-              <ArrowRightOutlined class="ms-1" />
-            </v-btn>
+            <v-btn prepend-icon="$arrowRight" variant="flat" class="scale-hover"> button </v-btn>
             <v-img :src="imageChart" alt="chart" width="124" height="126" />
           </div>
         </div>
@@ -113,7 +93,7 @@ function openNewTab() {
                   <template v-slot:prepend>
                     <v-icon class="text-8 me-4 text-lightText" icon="$circleOutline"></v-icon>
                   </template>
-                  <v-list-item-title class="text-subtitle-1 font-weight-regular">{{ item.link }} </v-list-item-title>
+                  <v-list-item-title class="text-subtitle-1 font-weight-regular">{{ item.link }}</v-list-item-title>
                 </v-list-item>
               </v-col>
             </template>
@@ -130,12 +110,14 @@ function openNewTab() {
     linear-gradient(183.77deg, rgb(var(--v-theme-primary)) 11.46%, rgb(var(--v-theme-darkprimary)) 100.33%);
   height: 100%;
   padding-bottom: 37px !important;
+
   .d-flex {
     .v-img {
       object-fit: cover;
       margin-right: -60px;
       margin-bottom: -20px;
       width: 124px;
+
       [dir='rtl'] & {
         margin-right: 0;
         margin-left: -60px;
@@ -143,6 +125,7 @@ function openNewTab() {
     }
   }
 }
+
 .v-btn {
   &.scale-hover {
     &:hover {
@@ -150,14 +133,17 @@ function openNewTab() {
     }
   }
 }
+
 .v-menu {
   .v-list-item__prepend {
     > .v-icon {
       --v-medium-emphasis-opacity: 1;
     }
   }
+
   .v-list-item--variant-plain {
     opacity: 1;
+
     &:hover {
       color: rgb(var(--v-theme-primary));
     }

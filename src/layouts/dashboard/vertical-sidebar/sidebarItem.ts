@@ -74,21 +74,6 @@ const sidebarItem: menu[] = [
     title: 'Oval Chip',
     icon: BorderOutlined,
     to: ''
-  },
-  {
-    title: 'Documentation',
-    icon: QuestionOutlined,
-    to: 'https://codedthemes.gitbook.io/mantis-vuetify/',
-    type: 'external',
-    chip: 'gitbook',
-    chipColor: 'secondary',
-    chipVariant: 'flat'
-  },
-  {
-    title: 'Road Map',
-    icon: DeploymentUnitOutlined,
-    to: 'https://codedthemes.gitbook.io/mantis-vuetify/roadmap',
-    type: 'external'
   }
 ];
 

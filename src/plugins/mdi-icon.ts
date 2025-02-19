@@ -1,5 +1,6 @@
-import { mdiCircleOutline } from '@mdi/js';
+import { mdiArrowRight, mdiCircleOutline } from '@mdi/js';
 
 export const icons = {
-  circleOutline: mdiCircleOutline
+  circleOutline: mdiCircleOutline,
+  arrowRight: mdiArrowRight
 };
