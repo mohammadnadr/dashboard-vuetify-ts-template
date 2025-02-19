@@ -140,7 +140,7 @@
   "continue": "ادامه",
   "didNotReceiveEmail": "ایمیل را دریافت نکردید؟",
   "checkSpamFilter": "فیلتر اسپم خود را بررسی کنید.",
-  "resendCode": "ارسال مجدد کد",
+  "resendCode": "ارسال مجدد",
 
   "enterVerificationCode": "کد تایید را وارد کنید",
   "verificationCodeMessage": "کدی از طریق ایمیل برای شما ارسال شده است.",
@@ -156,5 +156,13 @@
   "privacy Center": "مرکز حریم خصوصی",
   "feedback": "بازخورد",
   "history": "تاریخچه",
-  "setting": "تنظیمات"
+  "setting": "تنظیمات",
+
+  "resetPassword": "تنظیم مجدد رمز عبور",
+  "chooseNewPassword": "لطفاً رمز عبور جدید خود را انتخاب کنید",
+
+  "confirmPassword": "تأیید رمز عبور",
+  "enterPassword": "رمز عبور را وارد کنید",
+  "enterConfirmPassword": "رمز عبور تأیید را وارد کنید",
+  "myAccount": "حساب من"
 }

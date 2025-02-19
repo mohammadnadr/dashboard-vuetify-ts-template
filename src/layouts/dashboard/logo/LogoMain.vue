@@ -7,11 +7,7 @@ import { useCustomizerStore } from '@/stores/customizer';
 const customizer = useCustomizerStore();
 
 const dark = computed(() => {
-  if (customizer.actTheme === 'dark') {
-    return true;
-  } else {
-    return false;
-  }
+  return customizer.actTheme === 'dark';
 });
 </script>
 <template>

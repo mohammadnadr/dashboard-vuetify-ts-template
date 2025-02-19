@@ -12,8 +12,8 @@ const authStore = useAuthStore();
         <img src="@/assets/images/users/avatar-1.png" width="40" alt="user" />
       </v-avatar>
       <div class="px-3">
-        <h6 class="text-h6 mb-0">JWT User</h6>
-        <p class="text-lightText text-body-2 mb-0">UI/UX Designer</p>
+        <h6 class="text-h6 mb-0">Mohammad</h6>
+        <p class="text-lightText text-body-2 mb-0">Front-End Developer</p>
       </div>
       <div class="ms-auto">
         <v-menu :close-on-content-click="false">
@@ -25,13 +25,13 @@ const authStore = useAuthStore();
           <v-sheet rounded="md" width="110" elevation="24">
             <v-list>
               <v-list-item class="no-spacer" min-height="33" @click="authStore.logout()">
-                <v-list-item-title class="text-h6">Logout</v-list-item-title>
+                <v-list-item-title class="text-h6">{{ $t('logout') }}</v-list-item-title>
               </v-list-item>
               <v-list-item class="no-spacer" min-height="33">
-                <v-list-item-title class="text-h6">Profile</v-list-item-title>
+                <v-list-item-title class="text-h6">{{ $t('Profile') }}</v-list-item-title>
               </v-list-item>
               <v-list-item class="no-spacer" min-height="33">
-                <v-list-item-title class="text-h6">My account</v-list-item-title>
+                <v-list-item-title class="text-h6">{{$t('myAccount')}}</v-list-item-title>
               </v-list-item>
             </v-list>
           </v-sheet>

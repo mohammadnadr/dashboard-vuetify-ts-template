@@ -157,5 +157,15 @@
   "privacy Center": "مركز الخصوصية",
   "feedback": "ردود الفعل",
   "history": "التاريخ",
-  "setting": "الإعدادات"
+  "setting": "الإعدادات",
+
+  "resetPassword": "إعادة تعيين كلمة المرور",
+  "chooseNewPassword": "يرجى اختيار كلمة المرور الجديدة الخاصة بك",
+
+  "confirmPassword": "تأكيد كلمة المرور",
+  "enterPassword": "أدخل كلمة المرور",
+  "enterConfirmPassword": "أدخل تأكيد كلمة المرور",
+
+  "myAccount": "حسابي"
+
 }

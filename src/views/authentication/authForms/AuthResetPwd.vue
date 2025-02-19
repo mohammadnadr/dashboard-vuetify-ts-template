@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n(); // دسترسی به تابع t برای ترجمه
 // icons
 import { EyeInvisibleOutlined, EyeOutlined } from '@ant-design/icons-vue';
 
@@ -10,18 +14,17 @@ const password = ref('');
 const conpassword = ref('');
 const show1 = ref(false);
 const passwordRules = ref([
-  (v: string) => !!v || 'Password is required',
-  (v: string) => (v && v.length <= 10) || 'Password must be less than 10 characters'
+  (v: string) => !!v || t('passwordRequired'),
+  (v: string) => (v && v.length <= 10) || t('passwordLength')
 ]);
 const confirmpasswordRules = ref([
-  (v: string) => !!v || 'Password is required',
-  (v: string) => (v && v.length <= 10) || 'Password must be less than 10 characters'
+  (v: string) => !!v || t('passwordRequired'),
+  (v: string) => (v && v.length <= 10) || t('passwordLength')
 ]);
 
 const router = useRouter();
 
 function validate() {
-  // logform.value.validate();
   if (logform.value && logform.value.validate()) {
     router.push('/starter');
   }
@@ -31,12 +34,12 @@ function validate() {
 <template>
   <v-form ref="logform" lazy-validation v-model="valid" action="/starter" @submit.prevent="validate" class="mt-7 loginForm">
     <div class="mb-6">
-      <v-label>Password</v-label>
+      <v-label>{{ $t('password') }}</v-label>
       <v-text-field
         v-model="password"
         :rules="passwordRules"
         required
-        placeholder="Enter password"
+        :placeholder="$t('enterPassword')"
         variant="outlined"
         color="primary"
         hide-details="auto"
@@ -52,11 +55,11 @@ function validate() {
       </v-text-field>
     </div>
     <div class="mb-6">
-      <v-label>Confirm Password</v-label>
+      <v-label>{{ $t('confirmPassword') }}</v-label>
       <v-text-field
         v-model="conpassword"
         :rules="confirmpasswordRules"
-        placeholder="Enter confirm password"
+        :placeholder="$t('enterConfirmPassword')"
         required
         variant="outlined"
         color="primary"
@@ -64,9 +67,10 @@ function validate() {
         class="mt-2"
       ></v-text-field>
     </div>
-    <v-btn color="primary" block class="mt-5" variant="flat" size="large" :disabled="!valid" type="submit">Reset Password </v-btn>
+    <v-btn color="primary" block class="mt-5" variant="flat" size="large" :disabled="!valid" type="submit">{{ $t('resetPassword') }}</v-btn>
   </v-form>
 </template>
+
 <style lang="scss">
 .loginForm {
   .v-field--appended {

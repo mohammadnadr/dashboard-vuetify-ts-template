@@ -160,7 +160,7 @@ watch(priority, (newPriority) => {
             <v-avatar class="me-sm-2 me-0 py-2">
               <img src="@/assets/images/users/avatar-1.png" alt="Julia" />
             </v-avatar>
-            <h6 class="text-subtitle-1 mb-0 d-sm-block d-none">JWT User</h6>
+            <h6 class="text-subtitle-1 mb-0 d-sm-block d-none">Mohammad Nadr</h6>
           </div>
         </v-btn>
       </template>

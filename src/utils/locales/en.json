@@ -155,7 +155,15 @@
   "privacy Center": "Privacy center",
   "feedback": "Feedback",
   "history": "History",
-  "setting": "Setting"
+  "setting": "Setting",
+
+  "resetPassword": "Reset Password",
+  "chooseNewPassword": "Please choose your new password",
+
+  "confirmPassword": "Confirm Password",
+  "enterPassword": "Enter password",
+  "enterConfirmPassword": "Enter confirm password",
+  "myAccount": "My account"
 
 
 }

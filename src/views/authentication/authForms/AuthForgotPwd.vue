@@ -20,7 +20,7 @@ const router = useRouter();
 
 function validate() {
   if (logform.value && logform.value.validate()) {
-    router.push('/starter');
+    router.push({name:'Code Verification'});
   }
 }
 </script>

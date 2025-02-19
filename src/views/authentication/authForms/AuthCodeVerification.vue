@@ -1,20 +1,62 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import {useRouter} from "vue-router";
+
+const router = useRouter();
 
 const valid = ref(false);
 const logform = ref();
 const otp = ref('');
+
+
+function checkOTP() {
+  router.push({name: 'Reset Password'})
+}
 </script>
 
 <template>
-  <p class="text-h6 my-6">We’ve send you code on jone.****@company.com</p>
-  <v-form ref="logform" lazy-validation v-model="valid" class="mt-7 loginForm">
-    <v-otp-input type="number" v-model="otp" length="4" class="mb-5" single-line height="35"></v-otp-input>
-    <v-btn color="primary" block class="mt-2" variant="flat" size="large" type="submit">Continue </v-btn>
+  <p class="text-h6 my-6">
+    {{ $t('otpSentMessage', {email: 'jone.****@company.com'}) }}
+  </p>
+  <v-form
+    ref="logform"
+    v-model="valid"
+    lazy-validation
+    class="mt-7 loginForm"
+    @submit.prevent="checkOTP()"
+  >
+    <v-otp-input
+      v-model="otp"
+      type="number"
+      length="6"
+      class="mb-5"
+      single-line
+      height="35"
+    />
+    <v-btn
+      color="primary"
+      block
+      class="mt-2"
+      variant="flat"
+      size="large"
+      type="submit"
+    >
+      {{ $t('continue') }}
+    </v-btn>
   </v-form>
   <div class="d-sm-flex align-start justify-space-between mt-6">
-    <div class="text-subtitle-1 font-weight-regular">Did not receive the email? Check your spam filter, or</div>
-    <v-btn variant="text" color="primary" to="/#" class="text-capitalize mr-n2 mt-2 mt-sm-0">Resend Code</v-btn>
+    <div class="text-subtitle-1 font-weight-regular">
+      {{ $t('didNotReceiveEmail') }}
+      <span class="font-weight-bold">{{ $t('checkSpamFilter') }}</span>
+    </div>
+    <v-btn
+      variant="text"
+      color="primary"
+      to="/#"
+      class="text-capitalize mr-n2 mt-2 mt-sm-0"
+    >
+      {{ $t('resendCode') }}
+    </v-btn>
   </div>
 </template>
 

@@ -104,7 +104,7 @@ function validate(values: any, { setErrors }: any) {
         hide-details
       ></v-checkbox>
       <div class="ms-auto">
-        <router-link to="/forgot-pwd1" class="text-darkText link-hover"> {{ $t('forgotPassword') }}</router-link>
+        <router-link  :to="{name:'Forgot Password'}" class="text-darkText link-hover"> {{ $t('forgotPassword') }}</router-link>
       </div>
     </div>
     <v-btn color="primary" :loading="isSubmitting" block class="mt-5" variant="flat" size="large" :disabled="valid" type="submit">
