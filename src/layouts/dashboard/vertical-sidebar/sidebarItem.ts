@@ -39,23 +39,23 @@ const sidebarItem: menu[] = [
     to: '#',
     children: [
       {
-        title: 'Level 1',
+        title: 'Level 01',
         to: ''
       },
       {
-        title: 'Level 1',
+        title: 'Level 02',
         to: '',
         children: [
           {
-            title: 'Level 2',
+            title: 'Level 11',
             to: ''
           },
           {
-            title: 'Level 2',
+            title: 'Level 12',
             to: '/2.2level',
             children: [
               {
-                title: 'Level 3',
+                title: 'Level 21',
                 to: ''
               }
             ]

@@ -143,7 +143,19 @@
   "resendCode": "Resend Code",
 
   "enterVerificationCode": "Enter Verification Code",
-  "verificationCodeMessage": "We sent you a code via email."
+  "verificationCodeMessage": "We sent you a code via email.",
+
+  "edit Profile": "Edit Profile",
+  "view Profile": "View Profile",
+  "Profile": "Profile",
+  "billing": "Billing",
+  "logout": "Logout",
+  "support": "Support",
+  "account Settings": "Account settings",
+  "privacy Center": "Privacy center",
+  "feedback": "Feedback",
+  "history": "History",
+  "setting": "Setting"
 
 
 }

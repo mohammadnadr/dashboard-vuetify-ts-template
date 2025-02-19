@@ -143,5 +143,18 @@
   "resendCode": "ارسال مجدد کد",
 
   "enterVerificationCode": "کد تایید را وارد کنید",
-  "verificationCodeMessage": "کدی از طریق ایمیل برای شما ارسال شده است."
+  "verificationCodeMessage": "کدی از طریق ایمیل برای شما ارسال شده است.",
+
+  "edit Profile": "ویرایش پروفایل",
+  "Profile": "پروفایل",
+  "view Profile": "مشاهده پروفایل",
+  "social Profile": "پروفایل اجتماعی",
+  "billing": "صورتحساب",
+  "logout": "خروج",
+  "support": "پشتیبانی",
+  "account Settings": "تنظیمات حساب",
+  "privacy Center": "مرکز حریم خصوصی",
+  "feedback": "بازخورد",
+  "history": "تاریخچه",
+  "setting": "تنظیمات"
 }

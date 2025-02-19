@@ -144,6 +144,18 @@
   "resendCode": "إعادة إرسال الرمز",
 
   "enterVerificationCode": "أدخل رمز التحقق",
-  "verificationCodeMessage": "لقد أرسلنا لك رمزًا عبر البريد الإلكتروني."
+  "verificationCodeMessage": "لقد أرسلنا لك رمزًا عبر البريد الإلكتروني.",
 
+  "edit Profile": "تعديل الملف الشخصي",
+  "view Profile": "عرض الملف الشخصي",
+  "Profile": "الملف الشخصي",
+  "social Profile": "الملف الشخصي الاجتماعي",
+  "billing": "الفواتير",
+  "logout": "تسجيل الخروج",
+  "support": "الدعم",
+  "account Settings": "إعدادات الحساب",
+  "privacy Center": "مركز الخصوصية",
+  "feedback": "ردود الفعل",
+  "history": "التاريخ",
+  "setting": "الإعدادات"
 }

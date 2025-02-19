@@ -19,7 +19,7 @@ const props = defineProps({ item: Object, level: Number });
           <component :is="item.icon" class="iconClass" :level="level"></component>
         </template>
         <!---Title  -->
-        <v-list-item-title class="me-auto">{{ item.title }}</v-list-item-title>
+        <v-list-item-title class="me-auto">{{ $t(item.title) }}</v-list-item-title>
         <!---If Caption-->
         <v-list-item-subtitle v-if="item.subCaption" class="text-caption mt-n1 hide-menu">
           {{ item.subCaption }}

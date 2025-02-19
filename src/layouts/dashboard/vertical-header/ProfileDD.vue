@@ -29,18 +29,24 @@ const authStore = useAuthStore();
         <img src="@/assets/images/users/avatar-1.png" width="32" alt="Julia" />
       </v-avatar>
       <div>
-        <h6 class="text-h6 mb-0">JWT User</h6>
-        <p class="text-caption mb-0">UI/UX Designer</p>
+        <h6 class="text-h6 mb-0">Mohammad Nadr</h6>
+        <p class="text-caption mb-0">Front-End Developer</p>
       </div>
       <div class="ms-auto">
-        <v-btn variant="text" color="primary" rounded="sm" icon size="large" @click="authStore.logout()">
+        <v-btn variant="text" color="primary" rounded="sm" icon size="large" @click="authStore.logou$t()">
           <LogoutOutlined :style="{ fontSize: '20px' }" />
         </v-btn>
       </div>
     </div>
     <v-tabs v-model="tab" color="primary" grow>
-      <v-tab value="111"> <UserOutlined class="v-icon--start" /> Profile </v-tab>
-      <v-tab value="222"> <SettingOutlined class="v-icon--start" /> Setting </v-tab>
+      <v-tab value="111">
+        <UserOutlined class="v-icon--start" />
+        {{ $t('Profile') }}
+      </v-tab>
+      <v-tab value="222">
+        <SettingOutlined class="v-icon--start" />
+        {{ $t('setting') }}
+      </v-tab>
     </v-tabs>
     <perfect-scrollbar style="height: calc(100vh - 300px); max-height: 240px">
       <v-window v-model="tab">
@@ -51,7 +57,7 @@ const authStore = useAuthStore();
                 <EditOutlined :style="{ fontSize: '14px' }" class="me-4" />
               </template>
 
-              <v-list-item-title class="text-h6"> Edit Profile</v-list-item-title>
+              <v-list-item-title class="text-h6">{{ $t('edit Profile') }}</v-list-item-title>
             </v-list-item>
 
             <v-list-item color="primary" rounded="0" value="View Profile">
@@ -59,7 +65,7 @@ const authStore = useAuthStore();
                 <UserOutlined :style="{ fontSize: '14px' }" class="me-4" />
               </template>
 
-              <v-list-item-title class="text-h6"> View Profile</v-list-item-title>
+              <v-list-item-title class="text-h6">{{ $t('view Profile') }}</v-list-item-title>
             </v-list-item>
 
             <v-list-item color="primary" rounded="0" value="Social Profile">
@@ -67,7 +73,7 @@ const authStore = useAuthStore();
                 <ProfileOutlined :style="{ fontSize: '14px' }" class="me-4" />
               </template>
 
-              <v-list-item-title class="text-h6"> Social Profile</v-list-item-title>
+              <v-list-item-title class="text-h6">{{ $t('Social Profile') }}</v-list-item-title>
             </v-list-item>
 
             <v-list-item color="primary" rounded="0" value="Billing">
@@ -75,15 +81,15 @@ const authStore = useAuthStore();
                 <WalletOutlined :style="{ fontSize: '14px' }" class="me-4" />
               </template>
 
-              <v-list-item-title class="text-h6"> Billing</v-list-item-title>
+              <v-list-item-title class="text-h6"> {{ $t('billing') }}</v-list-item-title>
             </v-list-item>
 
-            <v-list-item @click="authStore.logout()" color="secondary" rounded="0">
+            <v-list-item @click="authStore.logou$t()" color="secondary" rounded="0">
               <template v-slot:prepend>
                 <LogoutOutlined :style="{ fontSize: '14px' }" class="me-4" />
               </template>
 
-              <v-list-item-title class="text-h6"> Logout</v-list-item-title>
+              <v-list-item-title class="text-h6"> {{ $t('logout') }}</v-list-item-title>
             </v-list-item>
           </v-list>
         </v-window-item>
@@ -94,7 +100,7 @@ const authStore = useAuthStore();
                 <QuestionCircleOutlined :style="{ fontSize: '14px' }" class="me-4" />
               </template>
 
-              <v-list-item-title class="text-h6"> Support</v-list-item-title>
+              <v-list-item-title class="text-h6"> {{ $t('support') }}</v-list-item-title>
             </v-list-item>
 
             <v-list-item color="primary" rounded="0" value="Account">
@@ -102,7 +108,7 @@ const authStore = useAuthStore();
                 <UserOutlined :style="{ fontSize: '14px' }" class="me-4" />
               </template>
 
-              <v-list-item-title class="text-h6"> Account settings</v-list-item-title>
+              <v-list-item-title class="text-h6"> {{ $t('account Settings') }}</v-list-item-title>
             </v-list-item>
 
             <v-list-item color="primary" rounded="0" value="Privacy">
@@ -110,7 +116,7 @@ const authStore = useAuthStore();
                 <LockOutlined :style="{ fontSize: '14px' }" class="me-4" />
               </template>
 
-              <v-list-item-title class="text-h6"> Privacy center</v-list-item-title>
+              <v-list-item-title class="text-h6">{{ $t('privacy Center') }}</v-list-item-title>
             </v-list-item>
 
             <v-list-item color="primary" rounded="0" value="Feedback">
@@ -118,7 +124,7 @@ const authStore = useAuthStore();
                 <CommentOutlined :style="{ fontSize: '14px' }" class="me-4" />
               </template>
 
-              <v-list-item-title class="text-h6"> Feedback</v-list-item-title>
+              <v-list-item-title class="text-h6"> {{ $t('feedback') }}</v-list-item-title>
             </v-list-item>
 
             <v-list-item color="primary" rounded="0" value="History">
@@ -126,7 +132,7 @@ const authStore = useAuthStore();
                 <UnorderedListOutlined :style="{ fontSize: '14px' }" class="me-4" />
               </template>
 
-              <v-list-item-title class="text-h6"> History</v-list-item-title>
+              <v-list-item-title class="text-h6"> {{ $t('history') }}</v-list-item-title>
             </v-list-item>
           </v-list>
         </v-window-item>
