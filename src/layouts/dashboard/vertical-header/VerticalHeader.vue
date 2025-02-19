@@ -136,10 +136,10 @@ watch(priority, (newPriority) => {
 
     <!-- ---------------------------------------------- -->
     <!-- Customizer -->
-    <!-- ---------------------------------------------- -->
+    <!-- ---------------todo : d-none working on it later------------------------------- -->
     <v-btn
       disabled
-      class="customizer-btn ml-sm-2 ms-1"
+      class="customizer-btn ml-sm-2 ms-1 d-none"
       icon
       color="darkText"
       rounded="sm"

@@ -16,8 +16,7 @@ export const useAuthStore = defineStore({
   }),
   actions: {
     async login(username: string, password: string) {
-      const user = await axios.post(`${baseUrl}/authenticate`, { username, password });
-
+      const user = await axios.get(`${baseUrl}/authenticate`, { username, password });
       // update pinia state
       this.user = user;
       // store user details and jwt in local storage to keep user logged in between page refreshes

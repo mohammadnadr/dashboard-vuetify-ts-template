@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Logo from '@/layouts/dashboard/logo/LogoMain.vue';
 import AuthLogin from '../authForms/AuthLogin.vue';
-import AuthFooter from './AuthFooter.vue';
 </script>
 
 <template>
@@ -47,12 +46,6 @@ import AuthFooter from './AuthFooter.vue';
             </v-col>
           </v-row>
         </div>
-      </v-container>
-    </v-col>
-    <!---Login Part-->
-    <v-col cols="12">
-      <v-container class="pt-0 pb-6">
-        <AuthFooter />
       </v-container>
     </v-col>
   </v-row>

@@ -115,8 +115,8 @@ header {
   filter: blur(18px);
   bottom: 0;
   transform: inherit;
+  left: 0;
   @media (max-width: 600px) {
     filter: blur(30px);
   }
-    left: 0;
 }
