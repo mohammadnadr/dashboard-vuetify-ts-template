@@ -33,7 +33,7 @@ const authStore = useAuthStore();
         <p class="text-caption mb-0">Front-End Developer</p>
       </div>
       <div class="ms-auto">
-        <v-btn variant="text" color="primary" rounded="sm" icon size="large" @click="authStore.logou$t()">
+        <v-btn variant="text" color="primary" rounded="sm" icon size="large" @click="authStore.logout()">
           <LogoutOutlined :style="{ fontSize: '20px' }" />
         </v-btn>
       </div>
@@ -84,7 +84,7 @@ const authStore = useAuthStore();
               <v-list-item-title class="text-h6"> {{ $t('billing') }}</v-list-item-title>
             </v-list-item>
 
-            <v-list-item @click="authStore.logou$t()" color="secondary" rounded="0">
+            <v-list-item @click="authStore.logout()" color="secondary" rounded="0">
               <template v-slot:prepend>
                 <LogoutOutlined :style="{ fontSize: '14px' }" class="me-4" />
               </template>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Logo from '@/layouts/dashboard/logo/LogoMain.vue';
-import AuthCheckMail from '../authForms/AuthCheckMail.vue';
+import AuthCheckMail from '@/components/authForms/AuthCheckMail.vue';
 </script>
 
 <template>

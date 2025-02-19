@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Logo from '@/layouts/dashboard/logo/LogoMain.vue';
-import AuthForgotPwd from '../authForms/AuthForgotPwd.vue';
+import AuthForgotPwd from '@/components/authForms/AuthForgotPwd.vue';
 // import AuthFooter from './AuthFooter.vue';
 </script>
 

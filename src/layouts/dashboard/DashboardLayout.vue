@@ -53,6 +53,7 @@ const getStyleObject = () => {
 <template>
   <v-locale-provider :rtl="customizer.isRtl">
     <v-app
+
       :style="getStyleObject()"
       :theme="customizer.actTheme"
       :class="[
@@ -69,18 +70,13 @@ const getStyleObject = () => {
       <HorizontalHeader v-if="customizer.setHorizontalLayout" />
       <HorizontalSidebar v-if="customizer.setHorizontalLayout" />
 
-      <v-main class="page-wrapper">
-        <v-container fluid>
+      <v-main class="page-wrapper bg-grey-lighten-4">
+        <v-container fluid >
           <div :class="customizer.boxed ? 'maxWidth' : ''">
             <!-- Loader start -->
             <LoaderWrapper />
             <!-- Loader end -->
             <RouterView />
-          </div>
-        </v-container>
-        <v-container fluid class="pt-0">
-          <div :class="customizer.boxed ? 'maxWidth' : ''">
-            <FooterPanel />
           </div>
         </v-container>
       </v-main>

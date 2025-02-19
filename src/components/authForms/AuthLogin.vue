@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 // icons
 import { EyeInvisibleOutlined, EyeOutlined } from '@ant-design/icons-vue';
-import { useAuthStore } from '@/stores/auth';
+import { useAuthStore } from '@/stores/auth.ts';
 import { Form } from 'vee-validate';
 
 

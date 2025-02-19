@@ -10,6 +10,11 @@ const MainRoutes = {
       name: 'Starter',
       path: '/starter',
       component: () => import('@/views/StarterPage.vue')
+    },
+    {
+      name: 'HelloWorld',
+      path: '/helloWorld',
+      component: () => import('@/views/pages/helloWorld/HelloWorld.vue')
     }
   ]
 };

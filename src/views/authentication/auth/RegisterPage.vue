@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Logo from '@/layouts/dashboard/logo/LogoMain.vue';
-import AuthRegister from '../authForms/AuthRegister.vue';
+import AuthRegister from '@/components/authForms/AuthRegister.vue';
 </script>
 
 <template>

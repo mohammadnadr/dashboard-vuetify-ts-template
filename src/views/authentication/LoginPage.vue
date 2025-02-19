@@ -1,6 +1,6 @@
 <script setup>
 import Logo from '@/layouts/dashboard/logo/LogoMain.vue';
-import AuthLogin from './authForms/AuthLogin.vue';
+import AuthLogin from '@/components/authForms/AuthLogin.vue';
 // import AuthFooter from '@/views/authentication/auth/AuthFooter.vue';
 
 import { createApp } from 'vue';

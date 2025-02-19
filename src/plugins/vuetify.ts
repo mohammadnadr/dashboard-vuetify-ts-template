@@ -3,6 +3,9 @@ import { aliases, mdi } from 'vuetify/iconsets/mdi-svg';
 import { icons } from './mdi-icon'; // Import icons from separate file
 import * as components from 'vuetify/components';
 import * as directives from 'vuetify/directives';
+// Styles
+import '@mdi/font/css/materialdesignicons.css'
+import 'vuetify/styles'
 
 export const PrimaryColor = '#1677ff';
 export const PrimaryDarkColor = '#0958d9';

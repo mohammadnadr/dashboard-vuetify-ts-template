@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Logo from '@/layouts/dashboard/logo/LogoMain.vue';
-import AuthCodeVerification from '../authForms/AuthCodeVerification.vue';
+import AuthCodeVerification from '@/components/authForms/AuthCodeVerification.vue';
 // import AuthFooter from './AuthFooter.vue';
 </script>
 
