@@ -28,6 +28,11 @@ const sidebarItem: menu[] = [
     icon: ChromeOutlined,
     to: '/'
   },
+  {
+    title: 'helloWorld',
+    icon: ChromeOutlined,
+    to: '/helloworld'
+  },
   { divider: true },
   { header: 'Others' },
   {
