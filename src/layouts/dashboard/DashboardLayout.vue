@@ -69,7 +69,7 @@ const getStyleObject = () => {
       <HorizontalHeader v-if="customizer.setHorizontalLayout" />
       <HorizontalSidebar v-if="customizer.setHorizontalLayout" />
 
-      <v-main class="page-wrapper bg-grey-lighten-4">
+      <v-main class="page-wrapper bg-grey-lighten-3">
         <v-container fluid >
           <div :class="customizer.boxed ? 'maxWidth' : ''">
             <!-- Loader start -->

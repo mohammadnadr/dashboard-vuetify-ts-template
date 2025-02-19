@@ -1,11 +1,9 @@
 // icons
 import {
-  QuestionOutlined,
   MenuUnfoldOutlined,
   StopOutlined,
   BorderOutlined,
   ChromeOutlined,
-  DeploymentUnitOutlined
 } from '@ant-design/icons-vue';
 
 export interface menu {
@@ -25,9 +23,8 @@ export interface menu {
 }
 
 const sidebarItem: menu[] = [
-  { header: 'Starterkit' },
   {
-    title: 'Sample Page',
+    title: 'Dashboard',
     icon: ChromeOutlined,
     to: '/'
   },
