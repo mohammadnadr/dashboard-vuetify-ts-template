@@ -37,18 +37,25 @@ export const useCustomizerStore = defineStore({
     },
     SET_FONT(payload: string) {
       this.fontTheme = payload;
+      localStorage.setItem('fontTheme', this.fontTheme);
     },
     SET_DIRECTION(dir: 'ltr' | 'rtl') {
       this.isRtl = dir === 'rtl';
-      console.log(333);
       localStorage.setItem('isRtl', this.isRtl);
       DirAttrSet(dir); // Call _setDirAttr to set the direction attribute
     },
     SET_LOCALE(locale: 'fa'| 'ar' | 'en'){
       this.locale = locale
       localStorage.setItem('locale' , this.locale)
-      if (locale === 'en') this.SET_DIRECTION('ltr')
-      else this.SET_DIRECTION('rtl')
+      if (locale === 'en') {
+        this.SET_DIRECTION('ltr');
+        this.SET_FONT('Poppins')
+      }
+      else {
+        this.SET_DIRECTION('rtl');
+        this.SET_FONT('Yekan')
+
+      }
 }
   }
 });

@@ -11,6 +11,15 @@ const languageDD = shallowRef([
 
 function changeLocale(item) {
   customizer.SET_LOCALE(item.value);
+  // if (item.value === 'en') {
+  //   // this.SET_DIRECTION('ltr');
+  //   customizer.fontTheme = 'Poppins'
+  // }
+  // else {
+  //   // this.SET_DIRECTION('rtl');
+  //   customizer.fontTheme = 'Yekan'
+  //
+  // }
 }
 </script>
 

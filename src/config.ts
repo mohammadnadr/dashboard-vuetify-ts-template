@@ -17,7 +17,7 @@ const config: ConfigProps = {
   mini_sidebar: false,
   setHorizontalLayout: false, // Horizontal layout
   actTheme: 'light',
-  fontTheme: 'Public sans',
+  fontTheme:  localStorage.getItem('fontTheme') || 'Yekan sans',
   inputBg: false,
   boxed: false,
   locale: localStorage.getItem('locale') || 'fa',

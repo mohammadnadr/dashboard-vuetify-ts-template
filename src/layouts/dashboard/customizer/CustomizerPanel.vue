@@ -163,7 +163,7 @@ const selectColor = (color: string, darkColor: string, lightcolor: string, light
 };
 
 // themes font Family options
-const fontFamily = ref(['Inter', 'Roboto', 'Poppins', 'Public sans']);
+const fontFamily = ref(['Inter', 'Roboto', 'Poppins', 'Public sans','IRANSans','Yekan']);
 // themes font Family options
 
 // Helper function to check if dark mode is preferred
