@@ -1,5 +1,5 @@
-import { CircleFilledIcon } from 'vue-tabler-icons';
 // icons
+import { CircleFilledIcon } from 'vue-tabler-icons';
 import { MenuUnfoldOutlined, ChromeOutlined } from '@ant-design/icons-vue';
 
 export interface menu {
