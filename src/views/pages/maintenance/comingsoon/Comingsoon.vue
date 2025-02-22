@@ -72,7 +72,7 @@ export default {
         </div>
         <v-row class="ma-0">
           <v-col cols="12" class="pt-7 pb-0">
-            <h6 class="text-h6 text-secondary mb-3">Be the first to be notified when Mantis launches.</h6>
+            <h6 class="text-h6 text-secondary mb-3">Be the first to be notified when NADR launches.</h6>
           </v-col>
           <v-col cols="12" class="d-sm-flex ga-2 align-center pt-0">
             <v-text-field variant="outlined" label="Email Address" color="primary" hide-details></v-text-field>
