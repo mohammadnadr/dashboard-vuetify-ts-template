@@ -15,14 +15,12 @@ const customizer = useCustomizerStore();
 const theme = useTheme();
 
 // Set the initial direction attribute when the component is mounted
-onMounted(() => {
-  if (customizer.locale && customizer.locale === 'en') DirAttrSet('ltr');
-  else DirAttrSet('rtl');
-});
-
 if (customizer.locale && customizer.locale === 'en') DirAttrSet('ltr');
 else DirAttrSet('rtl');
 if (!localStorage.getItem('locale')) customizer.SET_LOCALE('fa');
+
+// Set actTheme
+customizer.SET_THEME(localStorage.getItem('actTheme'))
 
 // Watch for changes in the isRtl property and update the direction attribute accordingly
 watch(

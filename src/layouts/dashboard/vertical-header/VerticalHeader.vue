@@ -3,6 +3,7 @@ import { ref, watch } from 'vue';
 import { useCustomizerStore } from '../../../stores/customizer';
 // icons
 import { MenuFoldOutlined, WindowsOutlined, TranslationOutlined, SettingOutlined, SearchOutlined } from '@ant-design/icons-vue';
+import { BrightnessDownIcon, MoonStarsIcon } from 'vue-tabler-icons';
 
 // dropdown imports
 import LanguageDD from './LanguageDD.vue';
@@ -19,6 +20,13 @@ watch(priority, (newPriority) => {
   // yes, console.log() is a side effect
   priority.value = newPriority;
 });
+
+function darkToggle() {
+  if (customizer.actTheme === 'dark') customizer.actTheme = 'light'
+  else customizer.actTheme = 'dark'
+  customizer.SET_THEME(customizer.actTheme);
+}
+
 </script>
 
 <template>
@@ -148,6 +156,14 @@ watch(priority, (newPriority) => {
       @click.stop="customizer.SET_CUSTOMIZER_DRAWER(!customizer.Customizer_drawer)"
     >
       <SettingOutlined class="icon" :style="{ fontSize: '16px' }" />
+    </v-btn>
+
+
+    <v-btn @click="darkToggle()" icon>
+      <Transition name="slide-right">
+        <v-icon v-if="customizer.actTheme === 'dark'" :icon="BrightnessDownIcon" class="position-absolute"></v-icon>
+        <v-icon v-else :icon="MoonStarsIcon" class="position-absolute"></v-icon>
+      </Transition>
     </v-btn>
 
     <!-- ---------------------------------------------- -->

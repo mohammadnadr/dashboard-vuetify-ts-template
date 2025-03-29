@@ -34,6 +34,8 @@ export const useCustomizerStore = defineStore({
     },
     SET_THEME(payload: string) {
       this.actTheme = payload;
+      localStorage.setItem('actTheme' , this.actTheme)
+
     },
     SET_FONT(payload: string) {
       this.fontTheme = payload;

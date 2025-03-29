@@ -16,7 +16,7 @@ const config: ConfigProps = {
   Customizer_drawer: false,
   mini_sidebar: false,
   setHorizontalLayout: false, // Horizontal layout
-  actTheme: 'light',
+  actTheme: localStorage.getItem('actTheme') || 'dark',
   fontTheme:  localStorage.getItem('fontTheme') || 'Yekan sans',
   inputBg: false,
   boxed: false,
