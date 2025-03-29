@@ -2,7 +2,13 @@
 import { ref, watch } from 'vue';
 import { useCustomizerStore } from '../../../stores/customizer';
 // icons
-import { MenuFoldOutlined, WindowsOutlined, TranslationOutlined, SettingOutlined, SearchOutlined } from '@ant-design/icons-vue';
+import {
+  MenuFoldOutlined,
+  WindowsOutlined,
+  TranslationOutlined,
+  SettingOutlined,
+  SearchOutlined
+} from '@ant-design/icons-vue';
 import { BrightnessDownIcon, MoonStarsIcon } from 'vue-tabler-icons';
 
 // dropdown imports
@@ -22,8 +28,8 @@ watch(priority, (newPriority) => {
 });
 
 function darkToggle() {
-  if (customizer.actTheme === 'dark') customizer.actTheme = 'light'
-  else customizer.actTheme = 'dark'
+  if (customizer.actTheme === 'dark') customizer.actTheme = 'light';
+  else customizer.actTheme = 'dark';
   customizer.SET_THEME(customizer.actTheme);
 }
 
@@ -158,7 +164,6 @@ function darkToggle() {
       <SettingOutlined class="icon" :style="{ fontSize: '16px' }" />
     </v-btn>
 
-
     <v-btn @click="darkToggle()" icon>
       <Transition name="slide-right">
         <v-icon v-if="customizer.actTheme === 'dark'" :icon="BrightnessDownIcon" class="position-absolute"></v-icon>
@@ -186,3 +191,19 @@ function darkToggle() {
     </v-menu>
   </v-app-bar>
 </template>
+<style>
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all 0.25s ease-out;
+}
+
+.slide-right-enter-from {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.slide-right-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+</style>
