@@ -152,8 +152,8 @@ function darkToggle() {
     <!-- Customizer -->
     <!-- ---------------todo : d-none working on it later------------------------------- -->
     <v-btn
-
-      class="customizer-btn ml-sm-2 ms-1 "
+      disabled
+      class="customizer-btn ml-sm-2 ms-1 d-none"
       icon
       color="darkText"
       rounded="sm"
@@ -166,8 +166,9 @@ function darkToggle() {
 
     <v-btn @click="darkToggle()" icon>
       <Transition name="slide-right">
-        <v-icon v-if="customizer.actTheme === 'dark'" :icon="BrightnessDownIcon" class="position-absolute"></v-icon>
-        <v-icon v-else :icon="MoonStarsIcon" class="position-absolute"></v-icon>
+        <BrightnessDownIcon class="position-absolute" v-if="customizer.actTheme === 'dark'"/>
+<!--        <v-icon  :icon="BrightnessDownIcon" class=" position-absolute"></v-icon>-->
+        <MoonStarsIcon v-else  class="position-absolute"></MoonStarsIcon>
       </Transition>
     </v-btn>
 
