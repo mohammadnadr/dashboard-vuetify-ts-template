@@ -14,7 +14,7 @@ import avatarGroup from '@/assets/images/users/avatar-group.png';
     </div>
     <div class="mt-5">
       <a
-        href="https://codedthemes.support-hub.io/"
+        href="https://MohammadHossein.support-hub.io/"
         target="_blank"
         class="v-btn v-theme--DefaultTheme bg-primary v-btn--density-default v-btn--size-default v-btn--variant-flat primary-shadow"
         >Support</a

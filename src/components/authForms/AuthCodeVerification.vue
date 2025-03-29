@@ -16,7 +16,7 @@ function checkOTP() {
 
 <template>
   <p class="text-h6 my-6">
-    {{ $t('otpSentMessage', {email: 'jone.****@company.com'}) }}
+    {{ $t('otpSentMessage', {email: 'amoo.nadr81@gmail.com'}) }}
   </p>
   <v-form
     ref="logform"

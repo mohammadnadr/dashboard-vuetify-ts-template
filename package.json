@@ -2,7 +2,7 @@
   "name": "NADR-vuetify-vuejs",
   "version": "1.2.0",
   "private": true,
-  "author": "CodedThemes",
+  "author": "MohammadHossein",
   "type": "module",
   "scripts": {
     "dev": "vite",

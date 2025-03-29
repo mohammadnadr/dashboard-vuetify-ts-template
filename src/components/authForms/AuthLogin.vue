@@ -12,8 +12,8 @@ const { t } = useI18n(); // دسترسی به تابع t برای ترجمه
 const checkbox = ref(false);
 const valid = ref(false);
 const show = ref(false);
-const password = ref('admin123');
-const username = ref('info@codedthemes.com');
+const password = ref('12345678');
+const username = ref('mohammadNadr');
 // Password validation rules
 const passwordRules = ref([
   (v: string) => !!v || t('passwordRequired'),
