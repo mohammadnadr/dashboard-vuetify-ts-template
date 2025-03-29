@@ -152,8 +152,8 @@ function darkToggle() {
     <!-- Customizer -->
     <!-- ---------------todo : d-none working on it later------------------------------- -->
     <v-btn
-      disabled
-      class="customizer-btn ml-sm-2 ms-1 d-none"
+
+      class="customizer-btn ml-sm-2 ms-1 "
       icon
       color="darkText"
       rounded="sm"

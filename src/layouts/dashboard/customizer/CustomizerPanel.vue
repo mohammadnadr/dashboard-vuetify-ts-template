@@ -375,7 +375,7 @@ function clearoptions() {
                           <div
                             class="d-flex flex-column bg-gray100 pa-2 rounded cursor-pointer"
                             :class="{
-                              Selected: vuetifyTheme.current.value.colors.primary === theme.color
+                              Selected: vuetifyTheme.current.value?.colors.primary === theme.color
                             }"
                             @click="selectColor(theme.color, theme.darkColor, theme.lightcolor, theme.lightcolorfordark, index)"
                           >
