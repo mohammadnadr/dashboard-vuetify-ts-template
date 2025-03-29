@@ -1,0 +1,54 @@
+.customer-modal {
+  width: calc(100% - 48px);
+  min-width: 340px;
+  max-width: 880px;
+}
+.vue3-easy-data-table__body {
+  td {
+    text-align: right !important;
+  }
+}
+
+.tree-section {
+  border: 3px solid #d7d5e7;
+  .tree-item > .tree-item{
+    padding-right: 12px;
+    padding: 4px;
+    margin-bottom: 2px !important;
+    border-top: 4px solid #fff;
+  }
+  .tree-body {
+    padding-right: 16px;
+    padding: 5px !important;
+    background: #f9f9f9;
+    i {
+      margin: 5px;
+    }
+    button {
+      border-radius: 3px;
+      padding: 2px 5px;
+      border-right: 1px solid #e5e5e5;
+    }
+    .tree-right-actions {
+      cursor: pointer;
+    }
+    
+  }
+}
+.tree {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #dee1e3;
+}
+.tree-list,
+.tree-row {
+  padding-right: 15px !important;
+}
+.tree-list .tree-row {
+  border-bottom: 1px solid #f0f8ff;
+  padding-bottom: 7px;
+}
+.tree-row-item {
+  background: aliceblue;
+
+}

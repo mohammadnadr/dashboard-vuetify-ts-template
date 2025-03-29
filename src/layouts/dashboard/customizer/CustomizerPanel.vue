@@ -41,10 +41,10 @@ interface ThemeColor {
 const themeColors = ref<ThemeColor[]>([
   {
     bg: 'themeDefault',
-    color: '#1677ff',
-    darkColor: '#0958d9',
-    lightcolor: '#e6f4ff',
-    lightcolorfordark: '#111a2c',
+    color: '#7265e6',
+    darkColor: '#6559cb',
+    lightcolor: '#eeedfc',
+    lightcolorfordark: '#222130',
     label: 'default'
   },
   {
@@ -163,7 +163,7 @@ const selectColor = (color: string, darkColor: string, lightcolor: string, light
 };
 
 // themes font Family options
-const fontFamily = ref(['Inter', 'Roboto', 'Poppins', 'Public sans','IRANSans','Yekan']);
+const fontFamily = ref(['Inter', 'Roboto', 'Poppins', 'Public sans']);
 // themes font Family options
 
 // Helper function to check if dark mode is preferred

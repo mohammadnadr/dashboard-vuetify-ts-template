@@ -14,7 +14,7 @@ export const useCustomizerStore = defineStore({
     inputBg: config.inputBg,
     boxed: config.boxed,
     isRtl: config.isRtl,
-    locale:config.locale
+    locale: config.locale
   }),
 
   getters: {},
@@ -34,7 +34,7 @@ export const useCustomizerStore = defineStore({
     },
     SET_THEME(payload: string) {
       this.actTheme = payload;
-      localStorage.setItem('actTheme' , this.actTheme)
+      localStorage.setItem('actTheme', this.actTheme);
 
     },
     SET_FONT(payload: string) {
@@ -46,18 +46,17 @@ export const useCustomizerStore = defineStore({
       localStorage.setItem('isRtl', this.isRtl);
       DirAttrSet(dir); // Call _setDirAttr to set the direction attribute
     },
-    SET_LOCALE(locale: 'fa'| 'ar' | 'en'){
-      this.locale = locale
-      localStorage.setItem('locale' , this.locale)
+    SET_LOCALE(locale: 'fa' | 'ar' | 'en') {
+      this.locale = locale;
+      localStorage.setItem('locale', this.locale);
       if (locale === 'en') {
         this.SET_DIRECTION('ltr');
-        this.SET_FONT('Poppins')
-      }
-      else {
+        this.SET_FONT('Poppins');
+      } else {
         this.SET_DIRECTION('rtl');
-        this.SET_FONT('Yekan')
+        this.SET_FONT('Yekan');
 
       }
-}
+    }
   }
 });

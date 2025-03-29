@@ -47,7 +47,7 @@ const light: ThemeDefinition = {
     lightText: '#8c8c8c',
     darkprimary: PrimaryDarkColor,
     darksecondary: '#7a7878',
-    borderLight: '#e6ebf1',
+    borderLight: '#fbfbfb',
     inputBorder: '#a1a1a5',
     containerBg: '#fafafb',
     surface: '#fff',
