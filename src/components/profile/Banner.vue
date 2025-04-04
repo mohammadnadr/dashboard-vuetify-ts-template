@@ -3,11 +3,26 @@ import { ref, defineProps, defineEmits, computed } from 'vue';
 import profileBg from '@/assets/images/profile/Banana.jpeg';
 import UserImage from '@/assets/images/profile/avatar.jpeg';
 
+
+// icons
+import {
+  PlusOutlined,
+  SolutionOutlined,
+  UserAddOutlined
+} from '@ant-design/icons-vue';
+import {
+  UserExclamationIcon,
+  FileTextIcon,
+  FileCvIcon,
+  BatIcon,
+  HelicopterIcon,
+} from 'vue-tabler-icons';
+
 // تعریف props
 const props = defineProps({
   modelValue: {
-    type: String,
-    required:true
+    type: [Number, String],
+    required: true
   }
 });
 
@@ -22,22 +37,12 @@ const tab = computed({
   }
 });
 
-// icons
-import {
-  PlusOutlined,
-  ProfileOutlined,
-  TeamOutlined,
-  SolutionOutlined,
-  FileImageOutlined,
-  UserAddOutlined
-} from '@ant-design/icons-vue';
-
 const items = ref([
-  { tab: 'Profile', icon: ProfileOutlined, href: '' },
-  { tab: 'followers', icon: TeamOutlined, href: '' },
-  { tab: 'friends', icon: SolutionOutlined, href: '' },
-  { tab: 'gallery', icon: FileImageOutlined, href: '' },
-  { tab: 'friend_request', icon: UserAddOutlined, href: '' },
+  { tab: 'Profile', icon: FileTextIcon, href: '' },
+  { tab: 'About me', icon: UserExclamationIcon, href: '' },
+  { tab: 'friends', icon: BatIcon, href: '' },
+  { tab: 'gallery', icon: FileCvIcon, href: '' },
+  { tab: 'friend_request', icon: HelicopterIcon, href: '' }
 ]);
 </script>
 
@@ -70,7 +75,10 @@ const items = ref([
             </v-col>
             <v-col md="12">
               <v-tabs v-model="tab" color="primary" class="profiletab" scrollable>
-                <v-tab v-for="item in items" :key="item.tab" :to="item.href">
+                <v-tab v-for="item in items"
+                       :key="item.tab"
+                       :value="item.tab"
+                >
                   <component :is="item.icon" class="me-2 text-subtitle-1"></component>
                   {{ $t(item.tab) }}
                 </v-tab>
