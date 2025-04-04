@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import BaseBreadcrumb from '@/components/shared/BaseBreadcrumb.vue';
 import { ref, shallowRef } from 'vue';
+import Banner from '@/components/profile/Banner.vue';
+
 const page = ref({ title: 'About me' });
 const breadcrumbs = shallowRef([
   {
     title: 'About me',
     disabled: true,
-    href:''
-  },
+    href: ''
+  }
 ]);
 </script>
 
@@ -15,9 +17,7 @@ const breadcrumbs = shallowRef([
   <BaseBreadcrumb :title="page.title" :breadcrumbs="breadcrumbs"></BaseBreadcrumb>
   <v-row>
     <v-col>
-      <v-card>
-
-      </v-card>
+      <Banner />
     </v-col>
   </v-row>
 </template>
