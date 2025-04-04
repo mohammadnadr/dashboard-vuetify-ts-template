@@ -12,9 +12,9 @@ const MainRoutes = {
       component: () => import('@/views/StarterPage.vue')
     },
     {
-      name: 'HelloWorld',
-      path: '/helloWorld',
-      component: () => import('@/views/pages/helloWorld/HelloWorld.vue')
+      name: 'aboutMe',
+      path: '/aboutMe',
+      component: () => import('@/views/pages/aboutMe/AboutMe.vue')
     }
   ]
 };

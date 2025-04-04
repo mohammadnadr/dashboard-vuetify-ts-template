@@ -1,14 +1,15 @@
 {
   "Dashboard": "Dashboard",
+  "About me": "About me",
   "Default": "Default",
   "Analytics": "Analytics",
   "Widget": "Widget",
   "Statistics": "Statistics",
   "Data": "Data",
   "Chart": "Chart",
+  "description": "description",
 
   "Components": "Components",
-
   "Applications": "Applications",
   "Chat": "Chat",
   "Calendar": "Calendar",
@@ -44,7 +45,6 @@
   "Product Detail": "Product Detail",
   "Add New Product": "Add New Product",
   "Checkout": "Checkout",
-
   "Forms": "Forms",
   "Plugins": "Plugins",
   "Editor": "Editor",
@@ -66,13 +66,11 @@
   "Org Charts": "Org Charts",
   "Apex Charts": "Apex Charts",
   "Form Validation": "Form Validation",
-
   "Utilities": "Utilities",
   "Icons": "Icons",
   "Ant design Icons": "Ant design Icons",
   "Tabler Icons": "Tabler Icons",
   "Material Icons": "Material Icons",
-
   "Pages": "Pages",
   "Authentication": "Authentication",
   "Login": "Login",
@@ -91,7 +89,6 @@
   "Contact Us": "Contact Us",
   "FAQs": "FAQs",
   "Privacy Policy": "Privacy Policy",
-
   "Others": "Others",
   "Menu levels": "Menu levels",
   "Level 1": "Level 1",
@@ -103,7 +100,6 @@
   "Sample Page": "Sample Page",
   "Documentation": "Documentation",
   "Road Map": "Road Map",
-
   "login": "Login",
   "dontHaveAccount": "Don't Have an account?",
   "emailAddress": "Email Address",
@@ -118,14 +114,12 @@
   "emailRequired": "E-mail is required",
   "emailSpaces": "E-mail must not contain spaces",
   "emailValid": "E-mail must be valid",
-
   "backToLogin": "Back to Login",
   "emailLabel": "Email address",
   "emailPlaceholder": "Enter email address",
   "checkSpam": "Do not forget to check SPAM box.",
   "sendPasswordResetEmail": "Send Password Reset Email",
   "emailNoSpaces": "E-mail must not contain spaces",
-
   "signUp": "Sign up",
   "alreadyHaveAccount": "Already have an account?",
   "firstName": "First Name*",
@@ -135,16 +129,13 @@
   "firstNameRequired": "First Name is required",
   "lastNameRequired": "Last Name is required",
   "passwordTrimSpaces": "Password cannot start or end with spaces",
-
   "otpSentMessage": "We've sent you a code at {email}.",
   "continue": "Continue",
   "didNotReceiveEmail": "Did not receive the email?",
   "checkSpamFilter": "check your spam filter.",
   "resendCode": "Resend Code",
-
   "enterVerificationCode": "Enter Verification Code",
   "verificationCodeMessage": "We sent you a code via email.",
-
   "edit Profile": "Edit Profile",
   "view Profile": "View Profile",
   "Profile": "Profile",
@@ -156,15 +147,13 @@
   "feedback": "Feedback",
   "history": "History",
   "setting": "Setting",
-
   "resetPassword": "Reset Password",
   "chooseNewPassword": "Please choose your new password",
-
   "confirmPassword": "Confirm Password",
   "enterPassword": "Enter password",
   "enterConfirmPassword": "Enter confirm password",
   "myAccount": "My account",
   "project title": "Project Title: Vuetify and TypeScript Dashboard",
-  "Init Description": "<h1>Technologies and Libraries</h1>  \n\n<h2>1. Vue.js</h2>  \n<p><strong>Version:</strong> 3.5.12</p>  \n<p>The Progressive\nJavaScript Framework\nAn approachable, performant and versatile framework for building web user interfaces.</p>  \n\n<h2>2. Vuetify</h2>  \n<p><strong>Version:</strong> 3.7.4</p>  \n<p>A UI library for Vue.js that facilitates designing based on Material Design.</p>  \n\n<h2>3. TypeScript</h2>  \n<p><strong>Version:</strong> 5.6.3</p>  \n<p>Enhances safe coding and testing, making use of static typing.</p>  \n\n<h2>4. Vite</h2>  \n<p><strong>Version:</strong> 5.4.11</p>  \n<p>A modern tool for building and developing web projects that optimizes load and rebuild speed.</p>  \n\n<h2>5. Pinia</h2>  \n<p><strong>Version:</strong> 2.2.6</p>  \n<p>A library for state management in Vue 3 applications.</p>  \n\n<h2>6. Vue Router</h2>  \n<p><strong>Version:</strong> 4.4.5</p>  \n<p>Used for managing routes and navigation in Vue applications.</p>  \n\n<h2>7. Axios</h2>  \n<p><strong>Version:</strong> 1.7.9</p>  \n<p>A library for making HTTP requests.</p>  \n\n<h2>8. Vee-Validate</h2>  \n<p><strong>Version:</strong> 4.14.7</p>  \n<p>Used for managing form validation in Vue.</p>  \n\n<h2>9. vue-i18n</h2>  \n<p><strong>Version:</strong> 10.0.4</p>  \n<p>Supports multilingual capabilities and localization in the application.</p>  \n\n<h2>10. Sass</h2>  \n<p>Used for CSS preprocessing, enabling writing cleaner and more organized code.</p>  \n\n<h2>11. ESLint and Prettier</h2>  \n<p>Linting and formatting tools for improving code quality.</p>  \n\n<h2>Images and Icons</h2>  \n<ul>  \n  <li><strong>Ant Design Vue:</strong> A library of UI components based on Ant Design for Vue.</li>  \n  <li><strong>@mdi/js</strong> and <strong>@mdi/font:</strong> Material Design icons.</li>  \n  <li><strong>Vue Tabler Icons:</strong> A collection of icons for Vue.</li>  \n</ul>  \n\n<h2>Scripts</h2>  \n<p>In the <code>scripts</code> of this project, several scripts are available for development, building, and code validation, which include:</p>  \n<ul>  \n  <li><code>dev</code>: For starting the development server with Vite</li>  \n  <li><code>build</code>: For building the application</li>  \n  <li><code>lint</code>: For checking and fixing code with ESLint</li>  \n</ul>  ",
+  "Init Description": "<h1>Technologies and Libraries</h1>  \n\n<h2>1. Vue.js</h2>  \n<p><strong>Version:</strong> 3.5.12</p>  \n<p>The Progressive\nJavaScript Framework\nAn approachable, performant and versatile framework for building web user interfaces.</p>  \n\n<h2>2. Vuetify</h2>  \n<p><strong>Version:</strong> 3.7.4</p>  \n<p>A UI library for Vue.js that facilitates designing based on Material Design.</p>  \n\n<h2>3. TypeScript</h2>  \n<p><strong>Version:</strong> 5.6.3</p>  \n<p>Enhances safe coding and testing, making use of static typing.</p>  \n\n<h2>4. Vite</h2>  \n<p><strong>Version:</strong> 5.4.11</p>  \n<p>A modern tool for building and developing web projects that optimizes load and rebuild speed.</p>  \n\n<h2>5. Pinia</h2>  \n<p><strong>Version:</strong> 2.2.6</p>  \n<p>A library for state management in Vue 3 applications.</p>  \n\n<h2>6. Vue Router</h2>  \n<p><strong>Version:</strong> 4.4.5</p>  \n<p>Used for managing routes and navigation in Vue applications.</p>  \n\n<h2>7. Axios</h2>  \n<p><strong>Version:</strong> 1.7.9</p>  \n<p>A library for making HTTP requests.</p>  \n\n<h2>8. Vee-Validate</h2>  \n<p><strong>Version:</strong> 4.14.7</p>  \n<p>Used for managing form validation in Vue.</p>  \n\n<h2>9. vue-i18n</h2>  \n<p><strong>Version:</strong> 10.0.4</p>  \n<p>Supports multilingual capabilities and localization in the application.</p>  \n\n<h2>10. Sass</h2>  \n<p>Used for CSS preprocessing, enabling writing cleaner and more organized code.</p>  \n\n<h2>11. ESLint and Prettier</h2>  \n<p>Linting and formatting tools for improving code quality.</p>  \n\n<h2>Images and Icons</h2>  \n<ul>  \n  <li><strong>Ant Design Vue:</strong> A library of UI components based on Ant Design for Vue.</li>  \n  <li><strong>mdi/js</strong> and <strong>mdi/font:</strong> Material Design icons.</li>  \n  <li><strong>Vue Tabler Icons:</strong> A collection of icons for Vue.</li>  \n</ul>  \n\n<h2>Scripts</h2>  \n<p>In the <code>scripts</code> of this project, several scripts are available for development, building, and code validation, which include:</p>  \n<ul>  \n  <li><code>dev</code>: For starting the development server with Vite</li>  \n  <li><code>build</code>: For building the application</li>  \n  <li><code>lint</code>: For checking and fixing code with ESLint</li>  \n</ul>  ",
   "projectDescription": "    \"en\": \"This project is a modern admin panel template built with Vue.js and Vuetify. It helps developers create beautiful and user-friendly dashboards using TypeScript and modern tools like Vite.\"  \n"
 }

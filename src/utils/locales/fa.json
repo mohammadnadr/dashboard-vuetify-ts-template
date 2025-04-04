@@ -1,14 +1,16 @@
 {
   "Dashboard": "داشبورد",
+  "About me": "درباره من",
   "Default": "پیش‌فرض",
   "Analytics": "تحلیل‌ها",
   "Widget": "ویجت",
   "Statistics": "آمار",
   "Data": "داده‌ها",
   "Chart": "نمودار",
+  "description": "توضیحات",
+  "Home": "خانه",
 
   "Components": "مولفه‌ها",
-
   "Applications": "برنامه‌ها",
   "Chat": "چت",
   "Calendar": "تقویم",
@@ -44,7 +46,6 @@
   "Product Detail": "جزئیات محصول",
   "Add New Product": "افزودن محصول جدید",
   "Checkout": "پرداخت",
-
   "Forms": "فرم‌ها",
   "Plugins": "افزونه‌ها",
   "Editor": "ویرایشگر",
@@ -66,13 +67,11 @@
   "Org Charts": "نمودار سازمانی",
   "Apex Charts": "نمودارهای آپکس",
   "Form Validation": "اعتبارسنجی فرم",
-
   "Utilities": "ابزارها",
   "Icons": "آیکون‌ها",
   "Ant design Icons": "آیکون‌های طراحی آنت",
   "Tabler Icons": "آیکون‌های تابلر",
   "Material Icons": "آیکون‌های متریال",
-
   "Pages": "صفحات",
   "Authentication": "احراز هویت",
   "Login": "ورود",
@@ -91,7 +90,6 @@
   "Contact Us": "تماس با ما",
   "FAQs": "سوالات متداول",
   "Privacy Policy": "سیاست حفظ اطلاعات",
-
   "Others": "سایر",
   "Menu levels": "سطوح منو",
   "Level 1": "سطح 1",
@@ -103,7 +101,6 @@
   "Sample Page": "صفحه نمونه",
   "Documentation": "مستندات",
   "Road Map": "نقشه راه",
-
   "login": "ورود",
   "dontHaveAccount": "حساب کاربری ندارید؟",
   "emailAddress": "آدرس ایمیل",
@@ -118,14 +115,12 @@
   "emailRequired": "ایمیل الزامی است",
   "emailSpaces": "ایمیل نباید شامل فضا باشد",
   "emailValid": "ایمیل باید معتبر باشد",
-
   "backToLogin": "بازگشت به صفحه ورود",
   "emailLabel": "آدرس ایمیل",
   "emailPlaceholder": "آدرس ایمیل خود را وارد کنید",
   "checkSpam": "فراموش نکنید که پوشه اسپم را بررسی کنید.",
   "sendPasswordResetEmail": "ارسال ایمیل بازنشانی رمز عبور",
   "emailNoSpaces": "ایمیل نباید شامل فضا باشد",
-
   "signUp": "ثبت نام",
   "alreadyHaveAccount": "قبلاً حساب کاربری دارید؟",
   "firstName": "نام*",
@@ -135,16 +130,13 @@
   "firstNameRequired": "نام الزامی است",
   "lastNameRequired": "نام خانوادگی الزامی است",
   "passwordTrimSpaces": "رمز عبور نمی‌تواند با فضا شروع یا تمام شود",
-
   "otpSentMessage": "کدی به آدرس {email} ارسال شده است.",
   "continue": "ادامه",
   "didNotReceiveEmail": "ایمیل را دریافت نکردید؟",
   "checkSpamFilter": "فیلتر اسپم خود را بررسی کنید.",
   "resendCode": "ارسال مجدد",
-
   "enterVerificationCode": "کد تایید را وارد کنید",
   "verificationCodeMessage": "کدی از طریق ایمیل برای شما ارسال شده است.",
-
   "edit Profile": "ویرایش پروفایل",
   "Profile": "پروفایل",
   "view Profile": "مشاهده پروفایل",
@@ -157,16 +149,13 @@
   "feedback": "بازخورد",
   "history": "تاریخچه",
   "setting": "تنظیمات",
-
   "resetPassword": "تنظیم مجدد رمز عبور",
   "chooseNewPassword": "لطفاً رمز عبور جدید خود را انتخاب کنید",
-
   "confirmPassword": "تأیید رمز عبور",
   "enterPassword": "رمز عبور را وارد کنید",
   "enterConfirmPassword": "رمز عبور تأیید را وارد کنید",
   "myAccount": "حساب من",
   "project title": "عنوان پروژه: داشبورد Vuetify و TypeScript,",
-  "Init Description": "<h1>تکنولوژی\u200Cها و کتابخانه\u200Cها</h1>  \n\n<h2>۱. Vue.js</h2>  \n<p><strong>نسخه:</strong> ۳.۵.۱۲</p>  \n<p>The Progressive\nJavaScript Framework\nAn approachable, performant and versatile framework for building web user interfaces..</p>  \n\n<h2>۲. Vuetify</h2>  \n<p><strong>نسخه:</strong> ۳.۷.۴</p>  \n<p>یک کتابخانه UI برای Vue.js است که طراحی بر پایه Material Design را تسهیل می\u200Cکند.</p>  \n\n<h2>۳. TypeScript</h2>  \n<p><strong>نسخه:</strong> ۵.۶.۳</p>  \n<p>به کدنویسی و تست ایمن\u200Cتر کمک می\u200Cکند و از نوع\u200Cدهی ایستا استفاده می\u200Cکند.</p>  \n\n<h2>۴. Vite</h2>  \n<p><strong>نسخه:</strong> ۵.۴.۱۱</p>  \n<p>یک ابزار مدرن برای ساخت و توسعه پروژه\u200Cهای وب است که سرعت بارگذاری و بازسازی را بهینه می\u200Cکند.</p>  \n\n<h2>۵. Pinia</h2>  \n<p><strong>نسخه:</strong> ۲.۲.۶</p>  \n<p>یک کتابخانه برای مدیریت وضعیت (State Management) در اپلیکیشن\u200Cهای Vue 3.</p>  \n\n<h2>۶. Vue Router</h2>  \n<p><strong>نسخه:</strong> ۴.۴.۵</p>  \n<p>برای مدیریت مسیرها و ناوبری در اپلیکیشن\u200Cهای Vue استفاده می\u200Cشود.</p>  \n\n<h2>۷. Axios</h2>  \n<p><strong>نسخه:</strong> ۱.۷.۹</p>  \n<p>یک کتابخانه برای انجام درخواست\u200Cهای HTTP است.</p>  \n\n<h2>۸. Vee-Validate</h2>  \n<p><strong>نسخه:</strong> ۴.۱۴.۷</p>  \n<p>برای مدیریت اعتبارسنجی فرم\u200Cها در Vue کاربرد دارد.</p>  \n\n<h2>۹. vue-i18n</h2>  \n<p><strong>نسخه:</strong> ۱۰.۰.۴</p>  \n<p>برای پشتیبانی از چند زبانی و محلی\u200Cسازی در اپلیکیشن.</p>  \n\n<h2>۱۰. Sass</h2>  \n<p>برای پیش\u200Cپردازش CSS استفاده می\u200Cشود و امکان نوشتن کدهای سبک\u200Cتر و سازماندهی شده\u200Cتر را فراهم می\u200Cکند.</p>  \n\n<h2>۱۱. ESLint و Prettier</h2>  \n<p>ابزارهای linting و formatting برای بهبود کیفیت کد.</p>  \n\n<h2>تصاویر و آیکون\u200Cها</h2>  \n<ul>  \n  <li><strong>Ant Design Vue:</strong> کتابخانه\u200Cای از کامپوننت\u200Cهای UI بر اساس طراحی آنت و برای Vue.</li>  \n  <li><strong>@mdi/js</strong> و <strong>@mdi/font:</strong> آیکون\u200Cهای Material Design.</li>  \n  <li><strong>Vue Tabler Icons:</strong> مجموعه\u200Cای از آیکون\u200Cها برای Vue.</li>  \n</ul>  \n\n<h2>اسکریپت\u200Cها</h2>  \n<p>در <code>scripts</code> این پروژه، چندین اسکریپت برای توسعه، ساخت، و اعتبارسنجی کد وجود دارد که شامل:</p>  \n<ul>  \n  <li><code>dev</code>: برای راه\u200Cاندازی سرور توسعه با Vite</li>  \n  <li><code>build</code>: برای ساخت اپلیکیشن</li>  \n  <li><code>lint</code>: برای بررسی و اصلاح کد با ESLint</li>  \n</ul>  ",
+  "Init Description": "<h1>تکنولوژی\u200Cها و کتابخانه\u200Cها</h1>  \n\n<h2>۱. Vue.js</h2>  \n<p><strong>نسخه:</strong> ۳.۵.۱۲</p>  \n<p>The Progressive\nJavaScript Framework\nAn approachable, performant and versatile framework for building web user interfaces..</p>  \n\n<h2>۲. Vuetify</h2>  \n<p><strong>نسخه:</strong> ۳.۷.۴</p>  \n<p>یک کتابخانه UI برای Vue.js است که طراحی بر پایه Material Design را تسهیل می\u200Cکند.</p>  \n\n<h2>۳. TypeScript</h2>  \n<p><strong>نسخه:</strong> ۵.۶.۳</p>  \n<p>به کدنویسی و تست ایمن\u200Cتر کمک می\u200Cکند و از نوع\u200Cدهی ایستا استفاده می\u200Cکند.</p>  \n\n<h2>۴. Vite</h2>  \n<p><strong>نسخه:</strong> ۵.۴.۱۱</p>  \n<p>یک ابزار مدرن برای ساخت و توسعه پروژه\u200Cهای وب است که سرعت بارگذاری و بازسازی را بهینه می\u200Cکند.</p>  \n\n<h2>۵. Pinia</h2>  \n<p><strong>نسخه:</strong> ۲.۲.۶</p>  \n<p>یک کتابخانه برای مدیریت وضعیت (State Management) در اپلیکیشن\u200Cهای Vue 3.</p>  \n\n<h2>۶. Vue Router</h2>  \n<p><strong>نسخه:</strong> ۴.۴.۵</p>  \n<p>برای مدیریت مسیرها و ناوبری در اپلیکیشن\u200Cهای Vue استفاده می\u200Cشود.</p>  \n\n<h2>۷. Axios</h2>  \n<p><strong>نسخه:</strong> ۱.۷.۹</p>  \n<p>یک کتابخانه برای انجام درخواست\u200Cهای HTTP است.</p>  \n\n<h2>۸. Vee-Validate</h2>  \n<p><strong>نسخه:</strong> ۴.۱۴.۷</p>  \n<p>برای مدیریت اعتبارسنجی فرم\u200Cها در Vue کاربرد دارد.</p>  \n\n<h2>۹. vue-i18n</h2>  \n<p><strong>نسخه:</strong> ۱۰.۰.۴</p>  \n<p>برای پشتیبانی از چند زبانی و محلی\u200Cسازی در اپلیکیشن.</p>  \n\n<h2>۱۰. Sass</h2>  \n<p>برای پیش\u200Cپردازش CSS استفاده می\u200Cشود و امکان نوشتن کدهای سبک\u200Cتر و سازماندهی شده\u200Cتر را فراهم می\u200Cکند.</p>  \n\n<h2>۱۱. ESLint و Prettier</h2>  \n<p>ابزارهای linting و formatting برای بهبود کیفیت کد.</p>  \n\n<h2>تصاویر و آیکون\u200Cها</h2>  \n<ul>  \n  <li><strong>Ant Design Vue:</strong> کتابخانه\u200Cای از کامپوننت\u200Cهای UI بر اساس طراحی آنت و برای Vue.</li>  \n  <li><strong>mdi/js</strong> و <strong>mdi/font:</strong> آیکون\u200Cهای Material Design.</li>  \n  <li><strong>Vue Tabler Icons:</strong> مجموعه\u200Cای از آیکون\u200Cها برای Vue.</li>  \n</ul>  \n\n<h2>اسکریپت\u200Cها</h2>  \n<p>در <code>scripts</code> این پروژه، چندین اسکریپت برای توسعه، ساخت، و اعتبارسنجی کد وجود دارد که شامل:</p>  \n<ul>  \n  <li><code>dev</code>: برای راه\u200Cاندازی سرور توسعه با Vite</li>  \n  <li><code>build</code>: برای ساخت اپلیکیشن</li>  \n  <li><code>lint</code>: برای بررسی و اصلاح کد با ESLint</li>  \n</ul>  ",
   "projectDescription": "این پروژه یک الگوی پنل مدیریتی مدرن است که با استفاده از Vue.js و Vuetify ساخته شده است. این الگو به توسعه\u200Cدهندگان کمک می\u200Cکند تا با استفاده از TypeScript و ابزارهای مدرن مانند Vite، داشبوردهایی زیبا و کاربرپسند ایجاد کنند."
-
 }

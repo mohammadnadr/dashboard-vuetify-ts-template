@@ -5,6 +5,8 @@ import {
   BorderOutlined,
   ChromeOutlined,
 } from '@ant-design/icons-vue';
+import { MessageChatbotIcon } from 'vue-tabler-icons';
+
 
 export interface menu {
   header?: string;
@@ -26,12 +28,12 @@ const sidebarItem: menu[] = [
   {
     title: 'Dashboard',
     icon: ChromeOutlined,
-    to: '/'
+    to: '/starter'
   },
   {
-    title: 'helloWorld',
-    icon: ChromeOutlined,
-    to: '/helloworld'
+    title: 'About me',
+    icon: MessageChatbotIcon,
+    to: '/aboutMe'
   },
   { divider: true },
   { header: 'Others' },
