@@ -1,6 +1,8 @@
 {
   "Dashboard": "Dashboard",
   "About me": "About me",
+  "about me description": "Hello! I am a programmer who entered the world of programming in 2019. In these few years, I cooperated with several companies and participated in various projects, both in person and remotely.\nI believe in teamwork and I like to interact with others. I consider myself a sociable and friendly person and I always try to share my new ideas and help to improve things.\nWhat I am most interested in is learning new JavaScript frameworks and libraries. I am always researching and learning in this field and I like to improve my skills and learn new technologies.",
+
   "Default": "Default",
   "Analytics": "Analytics",
   "Widget": "Widget",
@@ -8,6 +10,10 @@
   "Data": "Data",
   "Chart": "Chart",
   "description": "description",
+  "followers": "Followers",
+  "friends": "Friends",
+  "gallery": "Gallery",
+  "friend_request": "Friend Request",
 
   "Components": "Components",
   "Applications": "Applications",
