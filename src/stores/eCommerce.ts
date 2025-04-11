@@ -7,6 +7,7 @@ import type { ProductStateProps, Products } from '@/types/ecommerce';
 import { filter, sum } from 'lodash';
 import product1 from '@/assets/images/e-commerce/prod-1.png';
 import product2 from '@/assets/images/e-commerce/prod-2.png';
+import product3 from '@/assets/images/e-commerce/prod-3.png';
 
 export const useEcomStore = defineStore({
   id: 'eCommerce',
@@ -18,8 +19,8 @@ export const useEcomStore = defineStore({
       description: 'Zohbi tespus jic fob midze umew zawi toconkuh vuci wagojse bibwefel piko tu. Wefmeh pu zinnoir do bok debnomgit vijofecu tudnu to hunku ko za id ko sukodu.',
       rating: 2.1,
       discount: 25,
-      salePrice: 350,
-      offerPrice: 275,
+      salePrice: 275,
+      offerPrice: 350,
       gender: 'male',
       categories: ['fashion', 'books'],
       colors: ['error', 'warning', 'primary', 'secondary'],
@@ -36,9 +37,27 @@ export const useEcomStore = defineStore({
       description: 'Zohbi tesp dasdas usads gf dhf jic fob midze umew zawi toconkuh vuci wagojse bibwefel piko tu. Wefmeh pu zinnoir do bok debnomgit vijofecu tudnu to hunku ko za id ko sukodu.',
       rating: 2,
       discount: 0,
-      salePrice: 150,
-      offerPrice: 140,
+      salePrice: 145,
+      offerPrice: 150,
       gender: 'female',
+      categories: ['fashion', 'books'],
+      colors: ['error', 'warning', 'secondary'],
+      popularity: 20,
+      date: 1404,
+      created: new Date(),
+      isStock: false,
+      qty: 1
+    },
+      {
+      id: 3,
+      image: product3,
+      name: 'Keith3 Cunningham2 ',
+      description: ' loremZohbi tesp dasdas usads gf dhf jic fob midze umew zawi toconkuh vuci wagojse bibwefel piko tu. Wefmeh pu zinnoir do bok debnomgit vijofecu tudnu to hunku ko za id ko sukodu.',
+      rating: 4,
+      discount: 10,
+      salePrice: 120,
+      offerPrice: 190,
+      gender: 'kids',
       categories: ['fashion', 'books'],
       colors: ['error', 'warning', 'secondary'],
       popularity: 20,

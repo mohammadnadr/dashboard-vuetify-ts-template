@@ -106,7 +106,7 @@ function toggleWishlist() {
 .image-container {
   position: relative;
   display: inline-block;
-  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5)); /* سایه به اطراف تصویر */
+  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.5)); /* سایه به اطراف تصویر */
 
 }
 
