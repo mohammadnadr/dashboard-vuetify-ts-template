@@ -35,7 +35,33 @@ export const useEcomStore = defineStore({
     subTotal: 0,
     discount: 5,
     total: 0,
-    addresses: []
+    addresses: [
+      {
+        id: 1,
+        name: 'reza',
+        destination: 'Home',
+        building: 'building',
+        street: 'street',
+        city: 'Tehran',
+        state: 'Tehran',
+        country: 'Iran',
+        post: 'POST',
+        phone: '09371094039',
+        isDefault: true
+      },{
+        id: 2,
+        name: 'reza2',
+        destination: 'Home2',
+        building: 'building2',
+        street: 'street2',
+        city: 'Tehran2',
+        state: 'Tehran2',
+        country: 'Iran2',
+        post: 'POST2',
+        phone: '09371094040',
+        isDefault: false
+      },
+    ]
   }),
   getters: {},
   actions: {
@@ -54,7 +80,9 @@ export const useEcomStore = defineStore({
     async fetchAddress() {
       try {
         const data = await axios.get('/api/address/list');
-        this.addresses = data.data;
+        // todo temporary comment
+        // this.addresses = data.data;
+        console.log(data);
       } catch (error) {
         alert(error);
       }

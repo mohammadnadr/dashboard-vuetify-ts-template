@@ -101,10 +101,10 @@ const selected = ref(['shipping']);
             <v-col cols="12" sm="9" class="pt-sm-3 pt-0">
               <v-row>
                 <v-col cols="3" sm="2" class="pe-0">
-                  <v-text-field hide-details color="primary" type="number" placeholder="+91" variant="outlined"></v-text-field>
+                  <v-text-field hide-details color="primary" type="number" placeholder="+98" variant="outlined"></v-text-field>
                 </v-col>
                 <v-col cols="9" sm="10">
-                  <v-text-field hide-details color="primary" type="number" placeholder="31" variant="outlined">
+                  <v-text-field hide-details color="primary" type="number" placeholder="9371094039" variant="outlined">
                     <template v-slot:append-inner>
                       <AppstoreOutlined class="text-lightText" />
                     </template>
