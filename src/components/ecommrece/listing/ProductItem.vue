@@ -32,8 +32,8 @@ function toggleWishlist() {
 
 <template>
   <v-card variant="outlined" class="rounded white bg-surface overflow-hidden">
-    <router-link :to="`/ecommerce/product/detail/${goto}`">
-      <img alt="product" :src="image" class="w-100" />
+    <router-link class="image-container" :to="`/ecommerce/product/detail/${goto}`">
+      <img alt="product" :src="image" class="w-100 image" />
     </router-link>
     <v-btn icon color="secondary" variant="text" class="wishlist-icon" rounded @click="toggleWishlist">
       <HeartFilled v-if="isInWishlist" class="text-error" />
@@ -92,7 +92,7 @@ function toggleWishlist() {
     </v-snackbar>
   </v-card>
 </template>
-<style>
+<style >
 .descriptionH {
   height: 40px;
   overflow: hidden;
@@ -103,4 +103,13 @@ function toggleWishlist() {
   right: 10px;
   top: 10px;
 }
+.image-container {
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5)); /* سایه به اطراف تصویر */
+
+}
+
+
+
 </style>

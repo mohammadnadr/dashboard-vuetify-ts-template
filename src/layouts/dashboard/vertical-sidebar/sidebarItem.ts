@@ -37,7 +37,7 @@ const sidebarItem: menu[] = [
     to: '/aboutMe'
   },
   {
-    title: 'E-Commerce',
+    title: 'Shop',
     icon: ShoppingCartOutlined,
     to: '/ecommerce/',
     children: [
