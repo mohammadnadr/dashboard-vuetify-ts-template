@@ -2,9 +2,13 @@
 import { ref } from 'vue';
 
 // icons
-import { ShoppingCartOutlined, HeartOutlined, HeartFilled } from '@ant-design/icons-vue';
+import { ShoppingCartOutlined, HeartOutlined, HeartFilled,PlusOutlined } from '@ant-design/icons-vue';
+import { useEcomStore } from '@/stores/eCommerce.ts';
+import type { Products } from '@/types/ecommerce';
+const store = useEcomStore();
 
 const props = defineProps({
+  id:[String,Number],
   name: String,
   image: String,
   desc: String,
@@ -49,13 +53,17 @@ function toggleWishlist() {
             <p class="text-decoration-line-through text-lightText text-h6 mb-0 ms-2">${{ offerPrice }}</p>
           </div>
           <div class="text-medium-emphasis align-center d-flex ga-2">
-            <v-rating color="inputBorder" active-color="warning" half-increments size="small" v-model="rate" density="compact"> </v-rating>
+            <v-rating color="inputBorder" active-color="warning" half-increments size="small" v-model="rate"
+                      density="compact"></v-rating>
             <small>({{ rating }}+)</small>
           </div>
         </div>
-        <v-btn icon rounded color="primary" variant="flat" size="small" @click="$emit('handlecart', (successsnackbar = true))"
-          ><ShoppingCartOutlined :style="{ fontSize: '18px' }"
-        /></v-btn>
+        <v-btn icon rounded color="primary" variant="flat" size="small"
+               @click="$emit('handlecart', (successsnackbar = true))"
+        >
+          <ShoppingCartOutlined v-if="!store.cart.some(p => p.id === id)" :style="{ fontSize: '18px' }" />
+          <PlusOutlined v-else :style="{ fontSize: '18px' }" />
+        </v-btn>
       </div>
     </v-card-text>
     <v-snackbar
@@ -89,6 +97,7 @@ function toggleWishlist() {
   height: 40px;
   overflow: hidden;
 }
+
 .wishlist-icon {
   position: absolute;
   right: 10px;

@@ -125,6 +125,7 @@ function AddCart(p) {
       <v-row v-if="filteredProducts.length >= 1">
         <v-col :lg="toggleSide ? '3' : '4'" md="3" v-for="product in filteredProducts" :key="product.id">
           <ProductItemVue
+            :id="product.id"
             :name="product.name"
             :image="product.image"
             :desc="product.description"

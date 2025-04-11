@@ -27,8 +27,8 @@ export const useEcomStore = defineStore({
       created: new Date(),
       isStock: true,
       qty: 1
-    },],
-    cart: [],
+    }],
+    cart: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [],
     gender: '',
     category: [],
     price: '',
@@ -70,7 +70,17 @@ export const useEcomStore = defineStore({
     //AddToCart
     AddToCart(item: Products[]) {
       const product = item;
-      this.cart = [...this.cart, product];
+      const existingProduct = this.cart.find((p: Products) => p.id === product.id);
+
+      if (existingProduct) {
+        // اگر محصول وجود دارد، مقدار آن را افزایش بده
+        this.incrementQty(existingProduct, this.cart);
+      } else {
+        // اگر محصول وجود ندارد، آن را به کارت اضافه کن
+        // لازم است که qty را مقداردهی کنید
+        this.cart = [...this.cart, { ...product, qty: 1 }];
+        localStorage.setItem('cart', JSON.stringify(this.cart));
+      }
     },
     //qty
     incrementQty(item: Products, cart: Products[]): void {
@@ -88,7 +98,7 @@ export const useEcomStore = defineStore({
 
       // Update cart
       this.cart = updateCart;
-
+      localStorage.setItem('cart', JSON.stringify(this.cart));
       // Recalculate subtotal, discount, and total
       this.subTotal = sum(
         this.cart.map((product: Products) => {
@@ -147,6 +157,7 @@ export const useEcomStore = defineStore({
     deleteCart(itemId: number) {
       const updateCart = filter(this.cart, (p: Products) => p.id !== itemId);
       this.cart = updateCart;
+      localStorage.setItem('cart', JSON.stringify(this.cart));
     },
     //subtotal
     getsubTotal() {
