@@ -6,6 +6,7 @@ import axios from 'axios';
 import type { ProductStateProps, Products } from '@/types/ecommerce';
 import { filter, sum } from 'lodash';
 import product1 from '@/assets/images/e-commerce/prod-1.png';
+import product2 from '@/assets/images/e-commerce/prod-2.png';
 
 export const useEcomStore = defineStore({
   id: 'eCommerce',
@@ -26,6 +27,24 @@ export const useEcomStore = defineStore({
       date: 1404.1201,
       created: new Date(),
       isStock: true,
+      qty: 1
+    },
+      {
+      id: 2,
+      image: product2,
+      name: 'Keith Cunningham2 ',
+      description: 'Zohbi tesp dasdas usads gf dhf jic fob midze umew zawi toconkuh vuci wagojse bibwefel piko tu. Wefmeh pu zinnoir do bok debnomgit vijofecu tudnu to hunku ko za id ko sukodu.',
+      rating: 2,
+      discount: 0,
+      salePrice: 150,
+      offerPrice: 140,
+      gender: 'female',
+      categories: ['fashion', 'books'],
+      colors: ['error', 'warning', 'secondary'],
+      popularity: 20,
+      date: 1404,
+      created: new Date(),
+      isStock: false,
       qty: 1
     }],
     cart: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [],
