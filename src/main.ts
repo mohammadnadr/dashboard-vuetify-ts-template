@@ -44,9 +44,16 @@ const i18n = createI18n({
   silentFallbackWarn: true
 });
 
+
+// @ts-expect-error: vue3-easy-data-table doesn't have default export
+import Vue3EasyDataTable from 'vue3-easy-data-table';
+import 'vue3-easy-data-table/dist/style.css';
+
+
 const app = createApp(App);
 fakeBackend();
 app.use(router);
+app.component('EasyDataTable', Vue3EasyDataTable);
 app.use(PerfectScrollbarPlugin);
 app.use(createPinia());
 app.use(VueTablerIcons);

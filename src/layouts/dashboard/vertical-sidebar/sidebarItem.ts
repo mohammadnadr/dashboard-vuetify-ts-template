@@ -4,6 +4,7 @@ import {
   StopOutlined,
   BorderOutlined,
   ChromeOutlined,
+  ShoppingCartOutlined
 } from '@ant-design/icons-vue';
 import { MessageChatbotIcon } from 'vue-tabler-icons';
 
@@ -35,6 +36,39 @@ const sidebarItem: menu[] = [
     icon: MessageChatbotIcon,
     to: '/aboutMe'
   },
+  {
+    title: 'E-Commerce',
+    icon: ShoppingCartOutlined,
+    to: '/ecommerce/',
+    children: [
+      {
+        id: 'products',
+        title: 'Products',
+        to: '/ecommerce/products'
+      },
+      {
+        id: 'productdetail',
+        title: 'Product Detail',
+        to: '/ecommerce/product/detail/1'
+      },
+      {
+        id: 'productlist',
+        title: 'Product List',
+        to: '/ecommerce/productlist'
+      },
+      {
+        id: 'addproduct',
+        title: 'Add New Product',
+        to: '/ecommerce/add-product'
+      },
+      {
+        id: 'checkout',
+        title: 'Checkout',
+        to: '/ecommerce/checkout'
+      }
+    ]
+  },
+
   { divider: true },
   { header: 'Others' },
   {

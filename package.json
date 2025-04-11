@@ -25,6 +25,7 @@
     "@typescript-eslint/parser": "8.14.0",
     "ant-design-vue": "4.2.6",
     "axios": "^1.7.9",
+    "lodash": "^4.17.21",
     "pinia": "2.2.6",
     "typescript-eslint": "8.14.0",
     "vee-validate": "4.14.7",
@@ -34,12 +35,15 @@
     "vue-recaptcha-v3": "^2.0.1",
     "vue-router": "4.4.5",
     "vue-tabler-icons": "2.21.0",
+    "vue3-carousel": "0.5.1",
+    "vue3-easy-data-table": "^1.5.47",
     "vue3-perfect-scrollbar": "2.0.0",
     "vuetify": "3.7.4",
     "webpack-plugin-vuetify": "3.0.3"
   },
   "devDependencies": {
     "@mdi/font": "^7.4.47",
+    "@types/lodash": "^4.17.16",
     "@types/node": "22.9.0",
     "@vitejs/plugin-vue": "5.2.0",
     "@vue/tsconfig": "0.6.0",
